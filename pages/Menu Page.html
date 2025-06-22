@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Boys Burger - Our Delicious Menu</title>
+    <link href="../css/main.css" rel="stylesheet" />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fwhitesap6108back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-white">
+    <!-- Hero Section with Header -->
+    <div class="relative h-[751px] w-full" style="background-image: url('../assets/images/img_closeupshotburgerwithbaconcheeseredcoffeemug.png'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black bg-opacity-60">
+            <!-- Header -->
+            <header class="flex justify-between items-center px-[60px] py-[19px] h-[72px]" role="banner">
+                <!-- Logo -->
+                <img src="../assets/images/img_headerlogo.png" alt="The Boys Burger Logo" class="h-[53px] w-[53px]" />
+                
+                <!-- Navigation Menu -->
+                <nav class="flex space-x-[40px]" role="navigation">
+                    <a href="Home Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">HOME</a>
+                    <a href="Menu Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">MENU</a>
+                    <a href="#story" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">OUR STORY</a>
+                    <a href="#contact" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">CONTACT</a>
+                    <a href="#shop" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">OUR SHOP</a>
+                </nav>
+                
+                <!-- Franchise Button -->
+                <button type="button" class="bg-[#fe5d0a] text-white text-[18px] font-inter font-semibold leading-[22px] px-[28px] py-[12px] rounded-[5px] hover:bg-orange-600 transition-colors cursor-pointer" onclick="handleButtonClick(this)" aria-label="Franchise inquiry">
+                    FRANCHISE INQUIRE
+                </button>
+            </header>
+            
+            <!-- Hero Content -->
+            <div class="flex flex-col items-center justify-center h-full px-4">
+                <h1 class="text-white text-[64px] font-merienda font-black leading-[93px] text-center mb-8">
+                    Our Delicious Menu
+                </h1>
+                <p class="text-white text-[28px] font-inter font-medium leading-[34px] text-center max-w-4xl">
+                    From juicy burgers to crispy fries – everything made fresh, just for you.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Menu Section -->
+    <div class="bg-white py-[81px]">
+        <!-- Section Title -->
+        <h2 class="text-[#fe5d0a] text-[32px] font-inter font-bold leading-[39px] text-center uppercase mb-[120px]">
+            our menu
+        </h2>
+        
+        <!-- Menu Grid -->
+        <div class="max-w-[1141px] mx-auto px-4">
+            <!-- First Row -->
+            <div class="flex flex-col lg:flex-row gap-[47px] mb-[58px]">
+                <!-- Veg Burger -->
+                <div class="relative h-[463px] w-full lg:w-[348px] rounded-tr-[40px] rounded-br-[40px] overflow-hidden cursor-pointer transition-transform hover:scale-105" onclick="handleCardClick(this)">
+                    <img src="../assets/images/img_frontviewmeatburgerwithtomatoescheesesaladdarkbackground.png" alt="Veg Burger" class="w-full h-full object-cover" />
+                    <div class="absolute bottom-0 left-0 right-0 h-[173px] rounded-br-[40px]" style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(8,8,8,0.86) 50%, rgba(0,0,0,1) 100%);">
+                        <div class="absolute bottom-[76px] left-[109px]">
+                            <h3 class="text-white text-[24px] font-inter font-medium leading-[30px]">
+                                Veg Burger
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Egg Burger -->
+                <div class="relative h-[463px] w-full lg:w-[349px] rounded-tr-[40px] rounded-br-[40px] overflow-hidden cursor-pointer transition-transform hover:scale-105" onclick="handleCardClick(this)">
+                    <img src="../assets/images/img_frontviewcheeseburgerwithfriedegg.png" alt="Egg Burger" class="w-full h-full object-cover" />
+                    <div class="absolute bottom-0 left-0 right-0 h-[173px] rounded-br-[40px]" style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(8,8,8,0.9) 50%, rgba(0,0,0,1) 100%);">
+                        <div class="absolute bottom-[76px] left-[111px]">
+                            <h3 class="text-white text-[24px] font-inter font-medium leading-[30px]">
+                                Egg Burger
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chicken Burger -->
+                <div class="relative h-[463px] w-full lg:w-[349px] rounded-tr-[40px] rounded-br-[40px] overflow-hidden cursor-pointer transition-transform hover:scale-105" onclick="handleCardClick(this)">
+                    <img src="../assets/images/img_americanburgerwithchickenbaconhomemadebarbecuesauce.png" alt="Chicken Burger" class="w-full h-full object-cover" />
+                    <div class="absolute bottom-0 left-0 right-0 h-[173px] rounded-br-[40px]" style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(8,8,8,0.9) 50%, rgba(0,0,0,1) 100%);">
+                        <div class="absolute bottom-[76px] left-[84px]">
+                            <h3 class="text-white text-[24px] font-inter font-medium leading-[30px]">
+                                Chicken Burger
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Second Row -->
+            <div class="flex flex-col lg:flex-row gap-[47px] mb-[58px]">
+                <!-- French Fries -->
+                <div class="relative h-[463px] w-full lg:w-[350px] rounded-tr-[40px] rounded-br-[40px] overflow-hidden cursor-pointer transition-transform hover:scale-105" onclick="handleCardClick(this)">
+                    <img src="../assets/images/img_topviewdeliciousfriessauce.png" alt="French Fries" class="w-full h-full object-cover" />
+                    <div class="absolute bottom-0 left-0 right-0 h-[173px] rounded-br-[40px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]" style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(8,8,8,0.86) 50%, rgba(0,0,0,1) 100%);">
+                        <div class="absolute bottom-[76px] left-[97px]">
+                            <h3 class="text-white text-[24px] font-inter font-medium leading-[30px]">
+                                French Fries
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chicken Shawarma -->
+                <div class="relative h-[463px] w-full lg:w-[349px] rounded-tr-[40px] rounded-br-[40px] overflow-hidden cursor-pointer transition-transform hover:scale-105" onclick="handleCardClick(this)">
+                    <img src="../assets/images/img_3506.png" alt="Chicken Shawarma" class="w-full h-full object-cover" />
+                    <div class="absolute bottom-0 left-0 right-0 h-[173px] rounded-br-[40px]" style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(8,8,8,0.9) 50%, rgba(0,0,0,1) 100%);">
+                        <div class="absolute bottom-[70px] left-[64px]">
+                            <h3 class="text-white text-[24px] font-inter font-medium leading-[30px]">
+                                Chicken Shawarma
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bread Omelet -->
+                <div class="relative h-[463px] w-full lg:w-[349px] rounded-tr-[40px] rounded-br-[40px] overflow-hidden cursor-pointer transition-transform hover:scale-105" onclick="handleCardClick(this)">
+                    <img src="../assets/images/img_9016.png" alt="Bread Omelet" class="w-full h-full object-cover" />
+                    <div class="absolute bottom-0 left-0 right-0 h-[173px] rounded-br-[40px]" style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(8,8,8,0.9) 50%, rgba(0,0,0,1) 100%);">
+                        <div class="absolute bottom-[76px] left-[95px]">
+                            <h3 class="text-white text-[24px] font-inter font-medium leading-[30px]">
+                                Bread Omelet
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Third Row -->
+            <div class="flex flex-col lg:flex-row gap-[47px]">
+                <!-- Oreo Milkshake -->
+                <div class="relative h-[463px] w-full lg:w-[348px] rounded-tr-[40px] rounded-br-[40px] overflow-hidden cursor-pointer transition-transform hover:scale-105" onclick="handleCardClick(this)">
+                    <img src="../assets/images/img_icecreamwithcookietable.png" alt="Oreo Milkshake" class="w-full h-full object-cover" />
+                    <div class="absolute bottom-0 left-0 right-0 h-[173px] rounded-br-[40px]" style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(8,8,8,0.86) 50%, rgba(0,0,0,1) 100%);">
+                        <div class="absolute bottom-[76px] left-[84px]">
+                            <h3 class="text-white text-[24px] font-inter font-medium leading-[30px]">
+                                Oreo Milkshake
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chocolate Milkshake -->
+                <div class="relative h-[463px] w-full lg:w-[349px] rounded-tr-[40px] rounded-br-[40px] overflow-hidden cursor-pointer transition-transform hover:scale-105" onclick="handleCardClick(this)">
+                    <img src="../assets/images/img_chocolatemilkshakewithwhippedcreamchocolatechips.png" alt="Chocolate Milkshake" class="w-full h-full object-cover" />
+                    <div class="absolute bottom-0 left-0 right-0 h-[173px] rounded-br-[40px]" style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(8,8,8,0.9) 50%, rgba(0,0,0,1) 100%);">
+                        <div class="absolute bottom-[76px] left-[56px]">
+                            <h3 class="text-white text-[24px] font-inter font-medium leading-[30px]">
+                                Chocolate Milkshake
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lemon Mojito -->
+                <div class="relative h-[463px] w-full lg:w-[349px] rounded-tr-[40px] rounded-br-[40px] overflow-hidden cursor-pointer transition-transform hover:scale-105" onclick="handleCardClick(this)">
+                    <img src="../assets/images/img_3402.png" alt="Lemon Mojito" class="w-full h-full object-cover" />
+                    <div class="absolute bottom-0 left-0 right-0 h-[173px] rounded-br-[40px]" style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(8,8,8,0.9) 50%, rgba(0,0,0,1) 100%);">
+                        <div class="absolute bottom-[68px] left-[95px]">
+                            <h3 class="text-white text-[24px] font-inter font-medium leading-[30px]">
+                                Lemon Mojito
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Customer's Favorites Section -->
+    <div class="bg-[#e3e3e3] py-[79px]">
+        <div class="max-w-[1139px] mx-auto px-4">
+            <h2 class="text-[#fe5d0a] text-[32px] font-inter font-bold leading-[39px] text-center uppercase mb-[109px]">
+                CUSTOMER'S FAVORITES
+            </h2>
+            
+            <div class="flex flex-wrap justify-center gap-[20px]">
+                <img src="../assets/images/img_doublebaconcheeseburger.png" alt="Double Bacon Cheeseburger" class="w-[270px] h-[450px] object-cover rounded-[5px] cursor-pointer transition-transform hover:scale-105" onclick="handleCardClick(this)" />
+                <img src="../assets/images/img_arabicstreetfoodshaurmalavash_450x270.png" alt="Arabic Street Food Shawarma" class="w-[270px] h-[450px] object-cover rounded-[5px] cursor-pointer transition-transform hover:scale-105" onclick="handleCardClick(this)" />
+                <img src="../assets/images/img_icecreamwithcookietable_450x270.png" alt="Ice Cream with Cookie" class="w-[270px] h-[450px] object-cover rounded-[5px] cursor-pointer transition-transform hover:scale-105" onclick="handleCardClick(this)" />
+                <img src="../assets/images/img_9016_450x270.png" alt="Bread Omelet Special" class="w-[270px] h-[450px] object-cover rounded-[5px] cursor-pointer transition-transform hover:scale-105" onclick="handleCardClick(this)" />
+            </div>
+        </div>
+    </div>
+    
+    <!-- Franchise Section -->
+    <div class="relative h-[450px] w-full" style="background-image: url('../assets/images/img_shopbanner.png'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black bg-opacity-60">
+            <div class="flex items-center h-full px-[145px]">
+                <div class="max-w-[696px]">
+                    <h2 class="text-white text-[40px] font-inter font-bold leading-[48px] uppercase mb-[25px]">
+                        <span class="text-white">Become a Part of </span>
+                        <span class="text-[#fe5d0a]">The Boys Burger Family</span>
+                    </h2>
+                    <p class="text-white text-[24px] font-inter font-normal leading-[29px] mb-[59px]">
+                        Partner with a brand loved by burger lovers. Start your own franchise and grow with us!
+                    </p>
+                    <button type="button" class="bg-[#fe5d0a] text-white text-[18px] font-inter font-semibold leading-[22px] px-[28px] py-[16px] rounded-[5px] flex items-center gap-[10px] hover:bg-orange-600 transition-colors cursor-pointer" onclick="handleButtonClick(this)" aria-label="Inquire about franchise opportunities">
+                        <img src="../assets/images/img_mdishoplocationoutline.svg" alt="Location Icon" class="w-[24px] h-[24px]" />
+                        INQUIRE NOW
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-[#b83e00] py-[38px]" role="contentinfo">
+        <div class="max-w-[1440px] mx-auto px-4">
+            <div class="flex flex-col lg:flex-row justify-between items-start gap-8">
+                <!-- Logo and Social -->
+                <div class="flex flex-col items-center lg:items-start">
+                    <img src="../assets/images/img_footerlogo.png" alt="The Boys Burger Footer Logo" class="w-[146px] h-[146px] mb-[27px]" />
+                    <p class="text-white text-[16px] font-poppins font-semibold leading-[24px] mb-[27px]">
+                        FOLLOW US
+                    </p>
+                    <img src="../assets/images/img_riinstagramfill.svg" alt="Instagram" class="w-[50px] h-[50px] cursor-pointer hover:opacity-80 transition-opacity" onclick="handleSocialClick(this)" />
+                </div>
+                
+                <!-- Services -->
+                <div class="text-center lg:text-left">
+                    <h3 class="text-white text-[16px] font-inter font-semibold leading-[20px] mb-[23px]">
+                        SERVICES
+                    </h3>
+                    <ul class="space-y-[15px]">
+                        <li><a href="#delivery" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Door Delivery</a></li>
+                        <li><a href="#catering" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Catering</a></li>
+                        <li><a href="#dining" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Dining</a></li>
+                        <li><a href="#party" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Party Hall</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Links -->
+                <div class="text-center lg:text-left">
+                    <h3 class="text-white text-[16px] font-inter font-semibold leading-[20px] mb-[22px]">
+                        LINKS
+                    </h3>
+                    <ul class="space-y-[15px]">
+                        <li><a href="#home" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Home</a></li>
+                        <li><a href="#menu" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Menu</a></li>
+                        <li><a href="#about" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">About Us</a></li>
+                        <li><a href="#contact" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div class="text-center lg:text-left">
+                    <h3 class="text-white text-[16px] font-inter font-semibold leading-[20px] mb-[21px]">
+                        CONTACT US
+                    </h3>
+                    <div class="space-y-[15px]">
+                        <div class="flex items-center justify-center lg:justify-start gap-[7px]">
+                            <img src="../assets/images/img_iconparkoutlinemail.svg" alt="Email Icon" class="w-[24px] h-[24px]" />
+                            <a href="mailto:theboysburger06@gmail.com" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">theboysburger06@gmail.com</a>
+                        </div>
+                        <div class="flex items-center justify-center lg:justify-start gap-[6px]">
+                            <img src="../assets/images/img_iconoirphone.svg" alt="Phone Icon" class="w-[24px] h-[24px]" />
+                            <a href="tel:+919876504321" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">+91 9876504321</a>
+                        </div>
+                        <div class="flex items-center justify-center lg:justify-start gap-[7px]">
+                            <img src="../assets/images/img_iconoirphone.svg" alt="Phone Icon" class="w-[24px] h-[24px]" />
+                            <a href="tel:+919828928282" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">+91 9828928282</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Copyright -->
+    <div class="bg-[#591a00] py-[23px]">
+        <p class="text-white text-[16px] font-inter font-medium leading-[20px] text-center">
+            © 2025 The Boys Burger. All rights reserved.
+        </p>
+    </div>
+    
+    <script>
+        function handleNavigation(element) {
+            const href = element.getAttribute('href');
+            console.log('Navigating to:', href);
+            // Add navigation logic here
+        }
+        
+        function handleButtonClick(element) {
+            const buttonText = element.textContent.trim();
+            console.log('Button clicked:', buttonText);
+            // Add button click logic here
+        }
+        
+        function handleCardClick(element) {
+            const cardTitle = element.querySelector('h3')?.textContent || 'Menu Item';
+            console.log('Card clicked:', cardTitle);
+            // Add card click logic here
+        }
+        
+        function handleSocialClick(element) {
+            const platform = element.getAttribute('alt');
+            console.log('Social media clicked:', platform);
+            // Add social media click logic here
+        }
+    </script>
+</body>
+</html>

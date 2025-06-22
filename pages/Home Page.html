@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Boys Burger - Restaurant Homepage</title>
+    <link href="../css/main.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merienda+One:wght@400&family=Poppins:wght@600&display=swap" rel="stylesheet" />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fwhitesap6108back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-white font-inter">
+    <!-- Main Container -->
+    <div class="w-full">
+        <!-- Hero Section with Background -->
+        <div class="relative h-[754px] w-full" style="background-image: url('../assets/images/img_frontviewyummymeatcheeseburgerwithfrenchfriesdarkbackgrounddinnerburgersnackfastfoodsandwichsaladdishtoasts.png'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+            <div class="relative z-10 flex flex-col h-full px-[69px] py-[19px]">
+                <!-- Header Navigation -->
+                <header class="flex items-center justify-between h-[53px] w-full" role="navigation">
+                    <img src="../assets/images/img_inshot20241225000540336_1.png" alt="The Boys Burger Logo" class="h-[53px] w-[53px]" />
+                    
+                    <nav class="flex items-center space-x-[40px]">
+                        <a href="Home Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">HOME</a>
+                        <a href="Menu Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">MENU</a>
+                        <a href="#story" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">OUR STORY</a>
+                        <a href="#contact" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">CONTACT</a>
+                        <a href="#shop" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">OUR SHOP</a>
+                    </nav>
+                    
+                    <button type="button" class="bg-[#fe5d0a] h-[46px] w-[237px] rounded-[5px] flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" onclick="handleButtonClick(this)" aria-label="Franchise Inquiry">
+                        <span class="text-white text-[18px] font-inter font-semibold leading-[22px]">FRANCHISE INQUIRE</span>
+                    </button>
+                </header>
+                
+                <!-- Hero Content -->
+                <div class="flex-1 flex flex-col items-center justify-center">
+                    <img src="../assets/images/img_hero_text_desing.svg" alt="Hero Text Design" class="h-[323px] w-[459px] mb-[35px]" />
+                    
+                    <h1 class="text-white text-[28px] font-inter font-normal leading-[34px] text-center mb-[40px] max-w-[603px]">
+                        Burgers Made with Love and a Lot of Cheese!
+                    </h1>
+                    
+                    <button type="button" class="bg-[#fe5d0a] h-[52px] w-[179px] rounded-[5px] flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" onclick="handleButtonClick(this)" aria-label="Inquire Now">
+                        <span class="text-white text-[18px] font-inter font-semibold leading-[22px]">INQUIRE NOW</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- About Section -->
+        <div class="flex items-center justify-between px-[121px] py-[51px] min-h-[478px]">
+            <!-- Burger Image with Shadow -->
+            <div class="relative h-[478px] w-[514px]">
+                <div class="absolute bottom-0 left-[27px] w-[514px] h-[137px] bg-[#100f0f] rounded-full shadow-[0_4px_100px_rgba(136,136,136,1)] opacity-80"></div>
+                <img src="../assets/images/img_f6ec44fc2e7a4659992a386d4b6a93d0_1.png" alt="Delicious Burger" class="absolute top-0 left-[27px] h-[478px] w-[478px] z-10" />
+            </div>
+            
+            <!-- About Content -->
+            <div class="flex flex-col w-[557px] space-y-[16px]">
+                <p class="text-black text-[18px] font-inter font-semibold leading-[22px]">ABOUT US</p>
+                
+                <h2 class="text-[#fe5d0a] text-[40px] font-inter font-semibold leading-[48px]">
+                    Where Burgers Begin &<br />Businesses Grow
+                </h2>
+                
+                <p class="text-black text-[18px] font-inter font-normal leading-[21px] max-w-[557px]">
+                    Started in 2021 as students funding our own education. At 19, we launched a small food stall near Jamal Mohamed College.Today, we proudly run 3 shops — built on passion, hustle, and heart.
+                </p>
+                
+                <button type="button" class="bg-[#fe5d0a] h-[46px] w-[161px] rounded-[5px] flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95 mt-[46px]" onclick="handleButtonClick(this)" aria-label="Our Story">
+                    <span class="text-white text-[18px] font-inter font-semibold leading-[22px]">OUR STORY</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Grow With Us Section -->
+        <div class="bg-[#ffe8dd] py-[49px] px-[146px]">
+            <h2 class="text-black text-[32px] font-inter font-bold leading-[39px] text-center uppercase mb-[51px]">Grow with Us</h2>
+            
+            <div class="flex justify-between space-x-[20px]">
+                <!-- Royalty Card -->
+                <div class="bg-white border border-[#fe5d0a] rounded-[5px] h-[500px] w-[367px] flex flex-col items-center justify-center p-[41px] text-center">
+                    <h3 class="text-black text-[28px] font-inter font-semibold leading-[34px] mb-[23px]">ROYALTY</h3>
+                    <img src="../assets/images/img_mdiroyalty.svg" alt="Royalty Icon" class="h-[56px] w-[56px] mb-[96px]" />
+                    <p class="text-black text-[22px] font-inter font-normal leading-[26px] text-center max-w-[261px]">
+                        Low royalty fee up to 5%, allowing you to keep more of your profits while building a strong brand presence.
+                    </p>
+                </div>
+                
+                <!-- 50+ Menu Card -->
+                <div class="bg-[#fe5d0a] rounded-[5px] h-[500px] w-[367px] flex flex-col items-center justify-center p-[41px] text-center">
+                    <h3 class="text-white text-[28px] font-inter font-semibold leading-[34px] mb-[23px]">50+ MENU</h3>
+                    <img src="../assets/images/img_mdiburger.svg" alt="Burger Icon" class="h-[56px] w-[56px] mb-[96px]" />
+                    <p class="text-white text-[22px] font-inter font-normal leading-[26px] text-center max-w-[251px]">
+                        Diverse, delicious, and constantly evolving — our menu features 50+ items loved by all ages and tastes.
+                    </p>
+                </div>
+                
+                <!-- ROI Card -->
+                <div class="bg-white border border-[#fe5d0a] rounded-[5px] h-[500px] w-[367px] flex flex-col items-center justify-center p-[41px] text-center">
+                    <h3 class="text-black text-[28px] font-inter font-semibold leading-[34px] mb-[23px]">ROI IN 5 TO 8 MONTHS</h3>
+                    <img src="../assets/images/img_streamlineflexdecentworkandeconomicgrowthsolid.svg" alt="Growth Icon" class="h-[56px] w-[56px] mb-[96px]" />
+                    <p class="text-black text-[22px] font-inter font-normal leading-[26px] text-center max-w-[268px]">
+                        Smart investment with quick returns — most partners recover costs within just 5 to 8 months.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Our Menus Section -->
+        <div class="py-[38px] px-[146px]">
+            <h2 class="text-black text-[32px] font-inter font-bold leading-[39px] text-center uppercase mb-[101px]">our menus</h2>
+            
+            <div class="flex justify-between space-x-[47px] mb-[66px]">
+                <!-- Chicken Shawarma Card -->
+                <div class="relative h-[463px] w-[348px] cursor-pointer transition-transform hover:scale-105" onclick="handleCardClick(this)">
+                    <img src="../assets/images/img_streamlineplumpburgersolid.svg" alt="Burger Icon" class="absolute top-[6px] right-[55px] h-[13px] w-[14px] z-20" />
+                    <img src="../assets/images/img_arabicstreetfoodshaurmalavash.png" alt="Chicken Shawarma" class="h-[463px] w-[348px] object-cover rounded-tr-[40px] rounded-br-[40px]" />
+                    <div class="absolute bottom-0 left-0 right-0 h-[173px] rounded-br-[40px]" style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(8,8,8,0.86) 50%, rgba(0,0,0,1) 100%);">
+                        <div class="absolute bottom-[70px] left-[63px]">
+                            <h3 class="text-white text-[24px] font-inter font-medium leading-[30px]">Chicken Shawarma</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bread Omelet Card -->
+                <div class="relative h-[463px] w-[349px] cursor-pointer transition-transform hover:scale-105" onclick="handleCardClick(this)">
+                    <img src="../assets/images/img_9016.png" alt="Bread Omelet" class="h-[463px] w-[349px] object-cover rounded-tr-[40px] rounded-br-[40px]" />
+                    <div class="absolute bottom-0 left-0 right-0 h-[173px] rounded-br-[40px]" style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(8,8,8,0.9) 50%, rgba(0,0,0,1) 100%);">
+                        <div class="absolute bottom-[70px] left-[102px]">
+                            <h3 class="text-white text-[24px] font-inter font-medium leading-[30px]">Bread Omelet</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chicken Burger Card -->
+                <div class="relative h-[463px] w-[349px] cursor-pointer transition-transform hover:scale-105" onclick="handleCardClick(this)">
+                    <img src="../assets/images/img_americanburgerwithchickenbaconhomemadebarbecuesauce.png" alt="Chicken Burger" class="h-[463px] w-[348px] object-cover rounded-tr-[40px] rounded-br-[40px]" />
+                    <div class="absolute bottom-0 left-0 right-0 h-[173px] rounded-br-[40px]" style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(8,8,8,0.9) 50%, rgba(0,0,0,1) 100%);">
+                        <div class="absolute bottom-[60px] left-[91px]">
+                            <h3 class="text-white text-[24px] font-inter font-medium leading-[30px]">Chicken Burger</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- View All Button -->
+            <div class="flex justify-center">
+                <button type="button" class="bg-[#fe5d0a] h-[57px] w-[208px] rounded-[5px] flex items-center justify-center space-x-[10px] cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" onclick="handleButtonClick(this)" aria-label="View All Menu Items">
+                    <img src="../assets/images/img_carbon.svg" alt="View Icon" class="h-[27px] w-[27px]" />
+                    <span class="text-white text-[18px] font-inter font-semibold leading-[22px]">VIEW ALL</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Customer Reviews Section -->
+        <div class="bg-[#ffe8dd] py-[41px] px-[147px]">
+            <h2 class="text-black text-[32px] font-inter font-bold leading-[39px] text-center uppercase mb-[39px]">our customer says</h2>
+            
+            <!-- Review Images -->
+            <div class="flex justify-between space-x-[20px] mb-[40px]">
+                <!-- First Review Image -->
+                <div class="relative h-[413px] w-[270px]">
+                    <div class="absolute top-0 left-0 w-full h-[42px]" style="background: linear-gradient(90deg, rgba(255,232,221,0) 0%, rgba(153,139,132,1) 100%);"></div>
+                    <div class="relative mt-[14px]">
+                        <img src="../assets/images/img_inshot20250208135809658.png" alt="Customer Review" class="h-[386px] w-[270px] object-cover rounded-tr-[20px] rounded-bl-[20px]" />
+                        <img src="../assets/images/img_mask_group.png" alt="Review Overlay" class="absolute inset-0 h-[386px] w-[270px] object-cover rounded-tr-[20px] rounded-bl-[20px]" />
+                    </div>
+                </div>
+                
+                <!-- Center Video Review -->
+                <div class="relative h-[386px] w-[560px]">
+                    <img src="../assets/images/img_inshot20250208135809658_386x560.png" alt="Video Review" class="h-[386px] w-[560px] object-cover rounded-[16px]" />
+                    <div class="absolute top-[120px] left-[138px] bg-[#040404] shadow-[0_4px_109px_rgba(136,136,136,1)] h-[158px] w-[285px] flex items-center justify-center rounded-lg">
+                        <img src="../assets/images/img_logosyoutube.svg" alt="YouTube Play Button" class="h-[16px] w-[71px]" />
+                    </div>
+                </div>
+                
+                <!-- Third Review Image -->
+                <div class="relative h-[386px] w-[270px]">
+                    <img src="../assets/images/img_inshot20250208135809658_386x270.png" alt="Customer Review" class="h-[386px] w-[270px] object-cover rounded-tl-[16px] rounded-br-[16px]" />
+                    <img src="../assets/images/img_mask_group_black_900_02.png" alt="Review Overlay" class="absolute inset-0 h-[386px] w-[270px] object-cover rounded-tl-[16px] rounded-br-[16px]" />
+                </div>
+            </div>
+            
+            <!-- Customer Testimonials -->
+            <div class="text-center mb-[52px]">
+                <p class="text-black text-[24px] font-inter font-semibold leading-[29px] max-w-[981px] mx-auto">
+                    "Delicious food at affordable prices — always fresh and satisfying!"<br />
+                    "Love the passion and service these young founders bring to every meal."<br />
+                    "It's more than just food — it's a story of hard work you can taste."
+                </p>
+            </div>
+            
+            <!-- Give Review Button -->
+            <div class="flex justify-center">
+                <button type="button" class="bg-[#fe5d0a] h-[60px] w-[298px] rounded-[5px] flex items-center justify-center space-x-[10px] cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" onclick="handleButtonClick(this)" aria-label="Give Your Review">
+                    <img src="../assets/images/img_carbonreview.svg" alt="Review Icon" class="h-[30px] w-[30px]" />
+                    <span class="text-white text-[18px] font-inter font-semibold leading-[22px]">GIVE YOUR REVIEW</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Burgers with Attitude Section -->
+        <div class="relative h-[465px] w-full" style="background-image: url('../assets/images/img_frontviewyummymeatcheeseburgerwithfrenchfriesdarkbackgrounddinnerburgersnackfastfoodsandwichsaladdishtoasts_465x1434.png'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-black bg-opacity-63"></div>
+            <div class="relative z-10 flex flex-col items-center justify-center h-full px-[213px] text-center">
+                <h2 class="text-white text-[96px] font-merienda-one font-normal leading-[139px] mb-[1px]">Burgers with Attitude</h2>
+                <p class="text-white text-[36px] font-inter font-normal leading-[44px]">The Boys Burger – Where Every Bite Talks Back!</p>
+            </div>
+        </div>
+        
+        <!-- See Us Section -->
+        <div class="flex justify-between px-[204px] py-[104px]">
+            <!-- Left Content -->
+            <div class="flex flex-col w-[462px] space-y-[26px]">
+                <h2 class="text-black text-[32px] font-inter font-bold leading-[39px] uppercase">SEE US</h2>
+                
+                <p class="text-black text-[16px] font-inter font-semibold leading-[19px] max-w-[415px]">
+                    What started near Jamal Mohamed College in Trichy is now a growing street food sensation.<br />
+                    From one humble stall to three vibrant shops — our journey is built on bold flavors and bigger dreams.<br />
+                    Come find us where the grills sizzle, the burgers stack high, and every bite tells our story
+                </p>
+                
+                <img src="../assets/images/img_inshot20240926184603350.png" alt="Restaurant Location" class="h-[289px] w-[462px] object-cover mt-[171px]" />
+                
+                <img src="../assets/images/img_tvs.png" alt="Restaurant Interior" class="h-[483px] w-[393px] object-cover mt-[27px]" />
+            </div>
+            
+            <!-- Right Images -->
+            <div class="flex flex-col w-[562px] space-y-[30px]">
+                <img src="../assets/images/img_owner.png" alt="Restaurant Owner" class="h-[513px] w-[562px] object-cover" />
+                <img src="../assets/images/img_inshot20250208135809658_289x464.png" alt="Restaurant Team" class="h-[289px] w-[464px] object-cover" />
+            </div>
+        </div>
+        
+        <!-- Franchise Section -->
+        <div class="relative h-[437px] w-full" style="background-image: url('../assets/images/img_bigsandwichhamburgerburgerwithbeefredoniontomatofriedbacon.png'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+            <div class="relative z-10 flex flex-col justify-center h-full px-[147px]">
+                <h2 class="text-white text-[40px] font-inter font-bold leading-[48px] uppercase mb-[24px] max-w-[636px]">
+                    <span class="text-white">Become a Part of </span><span class="text-[#fe5d0a]">The Boys Burger Family</span>
+                </h2>
+                
+                <p class="text-white text-[24px] font-inter font-normal leading-[29px] mb-[56px] max-w-[696px]">
+                    Partner with a brand loved by burger lovers. Start your own franchise and grow with us!
+                </p>
+                
+                <button type="button" class="bg-[#fe5d0a] h-[54px] w-[213px] rounded-[5px] flex items-center justify-center space-x-[10px] cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" onclick="handleButtonClick(this)" aria-label="Inquire About Franchise">
+                    <img src="../assets/images/img_mdishoplocationoutline.svg" alt="Location Icon" class="h-[24px] w-[24px]" />
+                    <span class="text-white text-[18px] font-inter font-semibold leading-[22px]">INQUIRE NOW</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="bg-[#b83e00] py-[38px] px-[210px]">
+            <div class="flex justify-between items-start">
+                <!-- Logo and Social -->
+                <div class="flex flex-col items-center w-[146px]">
+                    <img src="../assets/images/img_inshot20241225000540336_1.png" alt="The Boys Burger Logo" class="h-[146px] w-[146px] mb-[27px]" />
+                    <p class="text-white text-[16px] font-poppins font-semibold leading-[24px] mb-[27px]">FOLLOW US</p>
+                    <img src="../assets/images/img_riinstagramfill.svg" alt="Instagram" class="h-[50px] w-[50px]" />
+                </div>
+                
+                <!-- Services -->
+                <div class="flex flex-col w-[105px]">
+                    <h3 class="text-white text-[16px] font-inter font-semibold leading-[20px] text-center mb-[23px]">SERVICES</h3>
+                    <ul class="space-y-[15px] text-center">
+                        <li><a href="#delivery" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Door Delivery</a></li>
+                        <li><a href="#catering" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Catering</a></li>
+                        <li><a href="#dining" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Dining</a></li>
+                        <li><a href="#party" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Party Hall</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Links -->
+                <div class="flex flex-col w-[182px]">
+                    <h3 class="text-white text-[16px] font-inter font-semibold leading-[20px] mb-[22px]">LINKS</h3>
+                    <ul class="space-y-[15px]">
+                        <li><a href="#home" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Home</a></li>
+                        <li><a href="#menu" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Menu</a></li>
+                        <li><a href="#about" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">About Us</a></li>
+                        <li><a href="#contact" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div class="flex flex-col w-[254px]">
+                    <h3 class="text-white text-[16px] font-inter font-semibold leading-[20px] mb-[23px]">CONTACT US</h3>
+                    <div class="space-y-[14px]">
+                        <div class="flex items-center space-x-[5px]">
+                            <img src="../assets/images/img_iconparkoutlinemail.svg" alt="Email Icon" class="h-[24px] w-[24px]" />
+                            <a href="mailto:theboysburger06@gmail.com" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors">theboysburger06@gmail.com</a>
+                        </div>
+                        <div class="flex items-center space-x-[6px]">
+                            <img src="../assets/images/img_iconoirphone.svg" alt="Phone Icon" class="h-[24px] w-[24px]" />
+                            <a href="tel:+919876504321" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors">+91 9876504321</a>
+                        </div>
+                        <div class="flex items-center space-x-[7px]">
+                            <img src="../assets/images/img_iconoirphone.svg" alt="Phone Icon" class="h-[24px] w-[24px]" />
+                            <a href="tel:+919828928282" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors">+91 9828928282</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Copyright -->
+        <div class="bg-[#591a00] py-[23px]">
+            <p class="text-white text-[16px] font-inter font-medium leading-[20px] text-center">
+                © 2025 The Boys Burger. All rights reserved.
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        function handleButtonClick(button) {
+            console.log('Button clicked:', button.textContent.trim());
+            // Add button click functionality here
+        }
+        
+        function handleNavigation(link) {
+            console.log('Navigation clicked:', link.textContent.trim());
+            // Add navigation functionality here
+        }
+        
+        function handleCardClick(card) {
+            console.log('Card clicked:', card);
+            // Add card click functionality here
+        }
+    </script>
+</body>
+</html>
