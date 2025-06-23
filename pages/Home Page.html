@@ -4,108 +4,167 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Boys Burger - Restaurant Homepage</title>
-    <link href="../css/main.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merienda+One:wght@400&family=Poppins:wght@600&display=swap" rel="stylesheet" />
-    <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fwhitesap6108back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
-    <script src="mobile-adaptive.js"></script>
+    <style>
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .font-merienda-one { font-family: 'Merienda One', cursive; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+        
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        
+        .hero-bg {
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23654321;stop-opacity:1" /><stop offset="50%" style="stop-color:%238B4513;stop-opacity:1" /><stop offset="100%" style="stop-color:%23A0522D;stop-opacity:1" /></linearGradient></defs><rect width="100%" height="100%" fill="url(%23bg)"/></svg>');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            .card-hover:hover {
+                transform: none;
+            }
+        }
+    </style>
 </head>
 <body class="bg-white font-inter">
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-black bg-opacity-90 z-50 lg:hidden">
+        <div class="flex flex-col h-full p-6">
+            <div class="flex justify-between items-center mb-8">
+                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23fe5d0a'/><text x='50' y='60' font-family='Arial' font-size='30' font-weight='bold' text-anchor='middle' fill='white'>BB</text></svg>" alt="The Boys Burger Logo" class="h-12 w-12" />
+                <button onclick="toggleMobileMenu()" class="text-white text-3xl">&times;</button>
+            </div>
+            <nav class="flex flex-col space-y-6">
+                <a href="#home" class="text-white text-xl font-inter font-normal hover:text-orange-500 transition-colors">HOME</a>
+                <a href="#menu" class="text-white text-xl font-inter font-normal hover:text-orange-500 transition-colors">MENU</a>
+                <a href="#story" class="text-white text-xl font-inter font-normal hover:text-orange-500 transition-colors">OUR STORY</a>
+                <a href="#contact" class="text-white text-xl font-inter font-normal hover:text-orange-500 transition-colors">CONTACT</a>
+                <a href="#shop" class="text-white text-xl font-inter font-normal hover:text-orange-500 transition-colors">OUR SHOP</a>
+                <button class="bg-orange-500 text-white px-6 py-3 rounded mt-4 font-semibold">FRANCHISE INQUIRE</button>
+            </nav>
+        </div>
+    </div>
+
     <!-- Main Container -->
     <div class="w-full">
         <!-- Hero Section with Background -->
-        <div class="relative h-[754px] w-full" style="background-image: url('../assets/images/img_frontviewyummymeatcheeseburgerwithfrenchfriesdarkbackgrounddinnerburgersnackfastfoodsandwichsaladdishtoasts.png'); background-size: cover; background-position: center;">
+        <div class="hero-bg relative h-screen w-full bg-gradient-to-br from-amber-900 via-orange-800 to-red-900">
             <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-            <div class="relative z-10 flex flex-col h-full px-[69px] py-[19px]">
+            <div class="relative z-10 flex flex-col h-full px-4 py-4 lg:px-16 lg:py-5">
                 <!-- Header Navigation -->
-                <header class="flex items-center justify-between h-[53px] w-full" role="navigation">
-                    <img src="../assets/images/img_footerlogo.png" alt="The Boys Burger Logo" class="h-[53px] w-[53px]" />
+                <header class="flex items-center justify-between h-12 lg:h-14 w-full" role="navigation">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23fe5d0a'/><text x='50' y='60' font-family='Arial' font-size='30' font-weight='bold' text-anchor='middle' fill='white'>BB</text></svg>" alt="The Boys Burger Logo" class="h-10 w-10 lg:h-14 lg:w-14" />
                     
-                    <nav class="flex items-center space-x-[40px]">
-                        <a href="Home Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">HOME</a>
-                        <a href="Menu Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">MENU</a>
-                        <a href="Story.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">OUR STORY</a>
-                        <a href="Inquiry Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">CONTACT</a>
-                        <a href="Location Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">OUR SHOP</a>
+                    <!-- Desktop Navigation -->
+                    <nav class="hidden lg:flex items-center space-x-10">
+                        <a href="#home" class="text-white text-lg font-inter font-normal hover:text-orange-500 transition-colors">HOME</a>
+                        <a href="#menu" class="text-white text-lg font-inter font-normal hover:text-orange-500 transition-colors">MENU</a>
+                        <a href="#story" class="text-white text-lg font-inter font-normal hover:text-orange-500 transition-colors">OUR STORY</a>
+                        <a href="#contact" class="text-white text-lg font-inter font-normal hover:text-orange-500 transition-colors">CONTACT</a>
+                        <a href="#shop" class="text-white text-lg font-inter font-normal hover:text-orange-500 transition-colors">OUR SHOP</a>
                     </nav>
                     
-                    <button type="button" class="bg-[#fe5d0a] h-[46px] w-[237px] rounded-[5px] flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" onclick="window.location.href='Inquiry Page.html'" aria-label="Franchise Inquiry">
-    <span class="text-white text-[18px] font-inter font-semibold leading-[22px]">FRANCHISE INQUIRE</span>
-</button>
-
+                    <!-- Desktop Franchise Button -->
+                    <button class="hidden lg:flex bg-orange-500 h-12 px-6 rounded-md items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95">
+                        <span class="text-white text-lg font-inter font-semibold">FRANCHISE INQUIRE</span>
+                    </button>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button onclick="toggleMobileMenu()" class="lg:hidden text-white text-2xl">☰</button>
                 </header>
                 
                 <!-- Hero Content -->
-                <div class="flex-1 flex flex-col items-center justify-center">
-                    <img src="../assets/images/img_hero_text_desing.svg" alt="Hero Text Design" class="h-[323px] w-[459px] mb-[35px]" />
+                <div class="flex-1 flex flex-col items-center justify-center px-4 text-center">
+                    <!-- Logo Text -->
+                    <div class="mb-6 lg:mb-8">
+                        <h1 class="text-4xl lg:text-7xl font-merienda-one text-white mb-2">The Boys</h1>
+                        <h1 class="text-4xl lg:text-7xl font-merienda-one text-orange-500 mb-2">Burger</h1>
+                        <p class="text-orange-400 text-lg lg:text-2xl font-inter">Since The Best Burger In Town</p>
+                    </div>
                     
-                    <h1 class="text-white text-[28px] font-inter font-normal leading-[34px] text-center mb-[40px] max-w-[603px]">
+                    <h2 class="text-white text-xl lg:text-3xl font-inter font-normal leading-relaxed mb-8 lg:mb-10 max-w-2xl">
                         Burgers Made with Love and a Lot of Cheese!
-                    </h1>
+                    </h2>
                     
-                    <button type="button" class="bg-[#fe5d0a] h-[52px] w-[179px] rounded-[5px] flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" onclick="window.location.href='Inquiry Page.html'" aria-label="Inquire Now">
-    <span class="text-white text-[18px] font-inter font-semibold leading-[22px]">INQUIRE NOW</span>
-</button>
-
+                    <button class="bg-orange-500 h-12 lg:h-14 px-8 lg:px-12 rounded-md flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95">
+                        <span class="text-white text-lg font-inter font-semibold">INQUIRE NOW</span>
+                    </button>
                 </div>
             </div>
         </div>
         
         <!-- About Section -->
-        <div class="flex items-center justify-between px-[121px] py-[51px] min-h-[478px]">
-            <!-- Burger Image with Shadow -->
-            <div class="relative h-[478px] w-[514px]">
-             <!--   <div class="absolute bottom-0 left-[27px] w-[514px] h-[137px] bg-[#100f0f] rounded-full shadow-[0_4px_100px_rgba(136,136,136,1)] opacity-80"></div> -->
-                <img src="../assets/images/img_f6ec44fc2e7a4659992a386d4b6a93d0_1.png" alt="Delicious Burger" class="absolute top-0 left-[27px] h-[478px] w-[478px] z-10" />
+        <div class="flex flex-col lg:flex-row items-center justify-between px-6 lg:px-32 py-12 lg:py-16 space-y-8 lg:space-y-0">
+            <!-- Burger Image -->
+            <div class="relative h-64 w-64 lg:h-96 lg:w-96 order-2 lg:order-1">
+                <div class="w-full h-full bg-gradient-to-br from-yellow-400 via-orange-500 to-red-600 rounded-full flex items-center justify-center">
+                    <div class="w-48 h-48 lg:w-72 lg:w-72 bg-amber-800 rounded-full flex items-center justify-center">
+                        <span class="text-white text-4xl lg:text-6xl">🍔</span>
+                    </div>
+                </div>
             </div>
             
             <!-- About Content -->
-            <div class="flex flex-col w-[557px] space-y-[16px]">
-                <p class="text-black text-[18px] font-inter font-semibold leading-[22px]">ABOUT US</p>
+            <div class="flex flex-col w-full lg:w-1/2 space-y-4 lg:space-y-6 order-1 lg:order-2 text-center lg:text-left">
+                <p class="text-black text-lg font-inter font-semibold">ABOUT US</p>
                 
-                <h2 class="text-[#fe5d0a] text-[40px] font-inter font-semibold leading-[48px]">
+                <h2 class="text-orange-500 text-3xl lg:text-4xl font-inter font-semibold leading-tight">
                     Where Burgers Begin &<br />Businesses Grow
                 </h2>
                 
-                <p class="text-black text-[18px] font-inter font-normal leading-[21px] max-w-[557px]">
-                    Started in 2021 as students funding our own education. At 19, we launched a small food stall near Jamal Mohamed College.Today, we proudly run 3 shops — built on passion, hustle, and heart.
+                <p class="text-black text-base lg:text-lg font-inter font-normal leading-relaxed">
+                    Started in 2021 as students funding our own education. At 19, we launched a small food stall near Jamal Mohamed College. Today, we proudly run 3 shops — built on passion, hustle, and heart.
                 </p>
                 
-                <a href="Story.html" aria-label="Our Story" class="bg-[#fe5d0a] h-[46px] w-[161px] rounded-[5px] flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95 mt-[46px]">
-						<span class="text-white text-[18px] font-inter font-semibold leading-[22px]">OUR STORY</span>
-				</a>
-
-
+                <button class="bg-orange-500 h-12 w-40 rounded-md flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95 mx-auto lg:mx-0 mt-6">
+                    <span class="text-white text-lg font-inter font-semibold">OUR STORY</span>
+                </button>
             </div>
         </div>
         
         <!-- Grow With Us Section -->
-        <div class="bg-[#ffe8dd] py-[49px] px-[146px]">
-            <h2 class="text-black text-[32px] font-inter font-bold leading-[39px] text-center uppercase mb-[51px]">Grow with Us</h2>
+        <div class="bg-orange-50 py-12 lg:py-16 px-6 lg:px-32">
+            <h2 class="text-black text-2xl lg:text-3xl font-inter font-bold text-center uppercase mb-12">Grow with Us</h2>
             
-            <div class="flex justify-between space-x-[20px]">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
                 <!-- Royalty Card -->
-                <div class="bg-white border border-[#fe5d0a] rounded-[5px] h-[500px] w-[367px] flex flex-col items-center justify-center p-[41px] text-center">
-                    <h3 class="text-black text-[28px] font-inter font-semibold leading-[34px] mb-[23px]">ROYALTY</h3>
-                    <img src="../assets/images/img_mdiroyalty.svg" alt="Royalty Icon" class="h-[56px] w-[56px] mb-[96px]" />
-                    <p class="text-black text-[22px] font-inter font-normal leading-[26px] text-center max-w-[261px]">
+                <div class="bg-white border border-orange-500 rounded-lg h-80 lg:h-96 flex flex-col items-center justify-center p-8 text-center">
+                    <h3 class="text-black text-xl lg:text-2xl font-inter font-semibold mb-4">ROYALTY</h3>
+                    <div class="text-4xl lg:text-5xl mb-8">👑</div>
+                    <p class="text-black text-base lg:text-lg font-inter font-normal text-center">
                         Low royalty fee up to 5%, allowing you to keep more of your profits while building a strong brand presence.
                     </p>
                 </div>
                 
                 <!-- 50+ Menu Card -->
-                <div class="bg-[#fe5d0a] rounded-[5px] h-[500px] w-[367px] flex flex-col items-center justify-center p-[41px] text-center">
-                    <h3 class="text-white text-[28px] font-inter font-semibold leading-[34px] mb-[23px]">50+ MENU</h3>
-                    <img src="../assets/images/img_mdiburger.svg" alt="Burger Icon" class="h-[56px] w-[56px] mb-[96px]" />
-                    <p class="text-white text-[22px] font-inter font-normal leading-[26px] text-center max-w-[251px]">
+                <div class="bg-orange-500 rounded-lg h-80 lg:h-96 flex flex-col items-center justify-center p-8 text-center">
+                    <h3 class="text-white text-xl lg:text-2xl font-inter font-semibold mb-4">50+ MENU</h3>
+                    <div class="text-4xl lg:text-5xl mb-8">🍔</div>
+                    <p class="text-white text-base lg:text-lg font-inter font-normal text-center">
                         Diverse, delicious, and constantly evolving — our menu features 50+ items loved by all ages and tastes.
                     </p>
                 </div>
                 
                 <!-- ROI Card -->
-                <div class="bg-white border border-[#fe5d0a] rounded-[5px] h-[500px] w-[367px] flex flex-col items-center justify-center p-[41px] text-center">
-                    <h3 class="text-black text-[28px] font-inter font-semibold leading-[34px] mb-[23px]">ROI IN 5 TO 8 MONTHS</h3>
-                    <img src="../assets/images/img_streamlineflexdecentworkandeconomicgrowthsolid.svg" alt="Growth Icon" class="h-[56px] w-[56px] mb-[96px]" />
-                    <p class="text-black text-[22px] font-inter font-normal leading-[26px] text-center max-w-[268px]">
+                <div class="bg-white border border-orange-500 rounded-lg h-80 lg:h-96 flex flex-col items-center justify-center p-8 text-center">
+                    <h3 class="text-black text-xl lg:text-2xl font-inter font-semibold mb-4">ROI IN 5 TO 8 MONTHS</h3>
+                    <div class="text-4xl lg:text-5xl mb-8">📈</div>
+                    <p class="text-black text-base lg:text-lg font-inter font-normal text-center">
                         Smart investment with quick returns — most partners recover costs within just 5 to 8 months.
                     </p>
                 </div>
@@ -113,37 +172,42 @@
         </div>
         
         <!-- Our Menus Section -->
-        <div class="py-[38px] px-[146px]">
-            <h2 class="text-black text-[32px] font-inter font-bold leading-[39px] text-center uppercase mb-[101px]">our menus</h2>
+        <div class="py-12 lg:py-16 px-6 lg:px-32">
+            <h2 class="text-black text-2xl lg:text-3xl font-inter font-bold text-center uppercase mb-16">our menus</h2>
             
-            <div class="flex justify-between space-x-[47px] mb-[66px]">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                 <!-- Chicken Shawarma Card -->
-                <div class="relative h-[463px] w-[348px] cursor-pointer transition-transform hover:scale-105" onclick="handleCardClick(this)">
-                    <img src="../assets/images/img_streamlineplumpburgersolid.svg" alt="Burger Icon" class="absolute top-[6px] right-[55px] h-[13px] w-[14px] z-20" />
-                    <img src="../assets/images/img_arabicstreetfoodshaurmalavash.png" alt="Chicken Shawarma" class="h-[463px] w-[348px] object-cover rounded-tr-[40px] rounded-br-[40px]" />
-                    <div class="absolute bottom-0 left-0 right-0 h-[173px] rounded-br-[40px]" style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(8,8,8,0.86) 50%, rgba(0,0,0,1) 100%);">
-                        <div class="absolute bottom-[70px] left-[63px]">
-                            <h3 class="text-white text-[24px] font-inter font-medium leading-[30px]">Chicken Shawarma</h3>
+                <div class="relative h-80 lg:h-96 cursor-pointer card-hover overflow-hidden rounded-tr-3xl rounded-br-3xl">
+                    <div class="w-full h-full bg-gradient-to-br from-amber-600 to-orange-700 flex items-center justify-center">
+                        <span class="text-white text-6xl">🌯</span>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 h-32 rounded-br-3xl bg-gradient-to-t from-black via-black/80 to-transparent">
+                        <div class="absolute bottom-8 left-8">
+                            <h3 class="text-white text-xl lg:text-2xl font-inter font-medium">Chicken Shawarma</h3>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Bread Omelet Card -->
-                <div class="relative h-[463px] w-[349px] cursor-pointer transition-transform hover:scale-105" onclick="handleCardClick(this)">
-                    <img src="../assets/images/img_9016.png" alt="Bread Omelet" class="h-[463px] w-[349px] object-cover rounded-tr-[40px] rounded-br-[40px]" />
-                    <div class="absolute bottom-0 left-0 right-0 h-[173px] rounded-br-[40px]" style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(8,8,8,0.9) 50%, rgba(0,0,0,1) 100%);">
-                        <div class="absolute bottom-[70px] left-[102px]">
-                            <h3 class="text-white text-[24px] font-inter font-medium leading-[30px]">Bread Omelet</h3>
+                <div class="relative h-80 lg:h-96 cursor-pointer card-hover overflow-hidden rounded-tr-3xl rounded-br-3xl">
+                    <div class="w-full h-full bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center">
+                        <span class="text-white text-6xl">🍳</span>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 h-32 rounded-br-3xl bg-gradient-to-t from-black via-black/80 to-transparent">
+                        <div class="absolute bottom-8 left-8">
+                            <h3 class="text-white text-xl lg:text-2xl font-inter font-medium">Bread Omelet</h3>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Chicken Burger Card -->
-                <div class="relative h-[463px] w-[349px] cursor-pointer transition-transform hover:scale-105" onclick="handleCardClick(this)">
-                    <img src="../assets/images/img_americanburgerwithchickenbaconhomemadebarbecuesauce.png" alt="Chicken Burger" class="h-[463px] w-[348px] object-cover rounded-tr-[40px] rounded-br-[40px]" />
-                    <div class="absolute bottom-0 left-0 right-0 h-[173px] rounded-br-[40px]" style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(8,8,8,0.9) 50%, rgba(0,0,0,1) 100%);">
-                        <div class="absolute bottom-[60px] left-[91px]">
-                            <h3 class="text-white text-[24px] font-inter font-medium leading-[30px]">Chicken Burger</h3>
+                <div class="relative h-80 lg:h-96 cursor-pointer card-hover overflow-hidden rounded-tr-3xl rounded-br-3xl md:col-span-2 lg:col-span-1">
+                    <div class="w-full h-full bg-gradient-to-br from-red-600 to-orange-700 flex items-center justify-center">
+                        <span class="text-white text-6xl">🍔</span>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 h-32 rounded-br-3xl bg-gradient-to-t from-black via-black/80 to-transparent">
+                        <div class="absolute bottom-8 left-8">
+                            <h3 class="text-white text-xl lg:text-2xl font-inter font-medium">Chicken Burger</h3>
                         </div>
                     </div>
                 </div>
@@ -151,167 +215,182 @@
             
             <!-- View All Button -->
             <div class="flex justify-center">
-                <button type="button" class="bg-[#fe5d0a] h-[57px] w-[208px] rounded-[5px] flex items-center justify-center space-x-[10px] cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" onclick="window.location.href='Menu Page.html'" aria-label="View All Menu Items">
-    <img src="../assets/images/img_carbon.svg" alt="View Icon" class="h-[27px] w-[27px]" />
-    <span class="text-white text-[18px] font-inter font-semibold leading-[22px]">VIEW ALL</span>
-</button>
-
+                <button class="bg-orange-500 h-12 lg:h-14 px-8 lg:px-12 rounded-md flex items-center justify-center space-x-3 cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95">
+                    <span class="text-white text-lg font-inter font-semibold">VIEW ALL</span>
+                    <span class="text-white text-xl">→</span>
+                </button>
             </div>
         </div>
         
         <!-- Customer Reviews Section -->
-        <div class="bg-[#ffe8dd] py-[41px] px-[147px]">
-            <h2 class="text-black text-[32px] font-inter font-bold leading-[39px] text-center uppercase mb-[39px]">our customer says</h2>
+        <div class="bg-orange-50 py-12 lg:py-16 px-6 lg:px-32">
+            <h2 class="text-black text-2xl lg:text-3xl font-inter font-bold text-center uppercase mb-8">our customer says</h2>
             
-            <!-- Review Images -->
-<div class="flex justify-between space-x-[20px] mb-[40px]">
-    
-    <!-- First Review YouTube Thumbnail -->
-    <a href="https://youtu.be/Rdt8gTqV40k?si=ktOdvHrKOjLSZAja" target="_blank" class="relative h-[413px] w-[270px]">
-        <img src="https://img.youtube.com/vi/Rdt8gTqV40k/maxresdefault.jpg" alt="Customer Review" class="h-[386px] w-[270px] object-cover rounded-tr-[20px] rounded-bl-[20px]" />
-        <img src="../assets/images/img_logosyoutube.svg" alt="YouTube Logo" class="absolute top-[10px] left-[10px] h-[20px] w-[50px]" />
-    </a>
-    
-    <!-- Center Video Review YouTube Thumbnail -->
-    <a href="https://www.youtube.com/shorts/sDLdTob3DOQ" target="_blank" class="relative h-[386px] w-[560px]">
-        <img src="https://img.youtube.com/vi/sDLdTob3DOQ/maxresdefault.jpg" alt="Video Review" class="h-[386px] w-[560px] object-cover rounded-[16px]" />
-        <img src="../assets/images/img_logosyoutube.svg" alt="YouTube Logo" class="absolute top-[10px] left-[10px] h-[20px] w-[50px]" />
-    </a>
-    
-    <!-- Third Review YouTube Thumbnail -->
-    <a href="https://youtube.com/shorts/0ChDxAdSfYk?si=Z4GLjnoZhATIuk0T" target="_blank" class="relative h-[386px] w-[270px]">
-        <img src="https://img.youtube.com/vi/0ChDxAdSfYk/maxresdefault.jpg" alt="Customer Review" class="h-[386px] w-[270px] object-cover rounded-tl-[16px] rounded-br-[16px]" />
-        <img src="../assets/images/img_logosyoutube.svg" alt="YouTube Logo" class="absolute top-[10px] left-[10px] h-[20px] w-[50px]" />
-    </a>
-
-</div>
-
-
-
-
+            <!-- Review Videos -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <div class="relative h-64 lg:h-80 bg-red-600 rounded-2xl overflow-hidden cursor-pointer hover:scale-105 transition-transform">
+                    <div class="w-full h-full flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <div class="text-4xl mb-2">▶️</div>
+                            <p class="text-sm">Customer Review</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative h-64 lg:h-80 bg-red-600 rounded-2xl overflow-hidden cursor-pointer hover:scale-105 transition-transform">
+                    <div class="w-full h-full flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <div class="text-4xl mb-2">▶️</div>
+                            <p class="text-sm">Video Review</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative h-64 lg:h-80 bg-red-600 rounded-2xl overflow-hidden cursor-pointer hover:scale-105 transition-transform md:col-span-2 lg:col-span-1">
+                    <div class="w-full h-full flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <div class="text-4xl mb-2">▶️</div>
+                            <p class="text-sm">Customer Review</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
             <!-- Customer Testimonials -->
-            <div class="text-center mb-[52px]">
-                <p class="text-black text-[24px] font-inter font-semibold leading-[29px] max-w-[981px] mx-auto">
-                    "Delicious food at affordable prices — always fresh and satisfying!"<br />
-                    "Love the passion and service these young founders bring to every meal."<br />
-                    "It's more than just food — it's a story of hard work you can taste."
-                </p>
+            <div class="text-center mb-12">
+                <div class="space-y-4 max-w-4xl mx-auto">
+                    <p class="text-black text-lg lg:text-xl font-inter font-semibold">
+                        "Delicious food at affordable prices — always fresh and satisfying!"
+                    </p>
+                    <p class="text-black text-lg lg:text-xl font-inter font-semibold">
+                        "Love the passion and service these young founders bring to every meal."
+                    </p>
+                    <p class="text-black text-lg lg:text-xl font-inter font-semibold">
+                        "It's more than just food — it's a story of hard work you can taste."
+                    </p>
+                </div>
             </div>
             
             <!-- Give Review Button -->
-            <<div class="flex justify-center">
-				<a href="https://g.co/kgs/FRmfY6a" class="bg-[#fe5d0a] h-[60px] w-[298px] rounded-[5px] flex items-center justify-center space-x-[10px] cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" aria-label="Give Your Review">
-				<img src="../assets/images/img_carbonreview.svg" alt="Review Icon" class="h-[30px] w-[30px]" />
-				<span class="text-white text-[18px] font-inter font-semibold leading-[22px]">GIVE YOUR REVIEW</span>
-				</a>
-			</div>
-
+            <div class="flex justify-center">
+                <button class="bg-orange-500 h-12 lg:h-14 px-8 lg:px-12 rounded-md flex items-center justify-center space-x-3 cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95">
+                    <span class="text-white text-lg font-inter font-semibold">GIVE YOUR REVIEW</span>
+                    <span class="text-white text-xl">⭐</span>
+                </button>
+            </div>
         </div>
         
         <!-- Burgers with Attitude Section -->
-        <div class="relative h-[465px] w-full" style="background-image: url('../assets/images/img_frontviewyummymeatcheeseburgerwithfrenchfriesdarkbackgrounddinnerburgersnackfastfoodsandwichsaladdishtoasts_465x1434.png'); background-size: cover; background-position: center;">
-    <div class="absolute inset-0 bg-black bg-opacity-60"></div> <!-- Use 60 or nearest -->
-    <div class="relative z-10 flex flex-col items-center justify-center h-full px-[213px] text-center">
-        <h2 class="text-white text-[96px] font-merienda-one font-normal leading-[139px] mb-[1px]">Burgers with Attitude</h2>
-        <p class="text-white text-[36px] font-inter font-normal leading-[44px]">The Boys Burger – Where Every Bite Talks Back!</p>
-    </div>
-</div>
+        <div class="relative h-80 lg:h-96 w-full bg-gradient-to-r from-amber-900 via-orange-800 to-red-900">
+            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+            <div class="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center">
+                <h2 class="text-white text-4xl lg:text-8xl font-merienda-one font-normal leading-tight mb-2">Burgers with Attitude</h2>
+                <p class="text-white text-xl lg:text-3xl font-inter font-normal">The Boys Burger – Where Every Bite Talks Back!</p>
+            </div>
+        </div>
 
         <!-- See Us Section -->
-        <div class="flex justify-between px-[204px] py-[104px]">
-            <!-- Left Content -->
-            <div class="flex flex-col w-[462px] space-y-[26px]">
-                <h2 class="text-black text-[32px] font-inter font-bold leading-[39px] uppercase">SEE US</h2>
+        <div class="py-12 lg:py-16 px-6 lg:px-32">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                <!-- Left Content -->
+                <div class="space-y-6">
+                    <h2 class="text-black text-2xl lg:text-3xl font-inter font-bold uppercase">SEE US</h2>
+                    
+                    <p class="text-black text-base lg:text-lg font-inter font-semibold leading-relaxed">
+                        What started near Jamal Mohamed College in Trichy is now a growing street food sensation.<br /><br />
+                        From one humble stall to three vibrant shops — our journey is built on bold flavors and bigger dreams.<br /><br />
+                        Come find us where the grills sizzle, the burgers stack high, and every bite tells our story
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="h-48 lg:h-64 bg-gradient-to-br from-orange-400 to-red-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white text-4xl">🏪</span>
+                        </div>
+                        
+                        <div class="h-48 lg:h-80 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white text-4xl">🍽️</span>
+                        </div>
+                    </div>
+                </div>
                 
-                <p class="text-black text-[16px] font-inter font-semibold leading-[19px] max-w-[415px]">
-                    What started near Jamal Mohamed College in Trichy is now a growing street food sensation.<br />
-                    From one humble stall to three vibrant shops — our journey is built on bold flavors and bigger dreams.<br />
-                    Come find us where the grills sizzle, the burgers stack high, and every bite tells our story
-                </p>
-                
-                <img src="../assets/images/img_inshot20240926184603350.png" alt="Restaurant Location" class="h-[289px] w-[462px] object-cover mt-[171px]" />
-                
-                <img src="../assets/images/img_tvs.png" alt="Restaurant Interior" class="h-[483px] w-[393px] object-cover mt-[27px]" />
-            </div>
-            
-            <!-- Right Images -->
-            <div class="flex flex-col w-[562px] space-y-[30px]">
-                <img src="../assets/images/img_owner.png" alt="Restaurant Owner" class="h-[513px] w-[562px] object-cover" />
-                <img src="../assets/images/img_inshot20250208135809658_289x464.png" alt="Restaurant Team" class="h-[289px] w-[464px] object-cover" />
+                <!-- Right Images -->
+                <div class="space-y-6">
+                    <div class="h-64 lg:h-80 bg-gradient-to-br from-red-500 to-orange-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white text-4xl">👨‍🍳</span>
+                    </div>
+                    <div class="h-48 lg:h-64 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center">
+                        <span class="text-white text-4xl">👥</span>
+                    </div>
+                </div>
             </div>
         </div>
         
         <!-- Franchise Section -->
-        <div class="relative h-[437px] w-full" style="background-image: url('../assets/images/img_bigsandwichhamburgerburgerwithbeefredoniontomatofriedbacon.png'); background-size: cover; background-position: center;">
+        <div class="relative h-80 lg:h-96 w-full bg-gradient-to-r from-red-800 via-orange-700 to-amber-800">
             <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-            <div class="relative z-10 flex flex-col justify-center h-full px-[147px]">
-                <h2 class="text-white text-[40px] font-inter font-bold leading-[48px] uppercase mb-[24px] max-w-[636px]">
-                    <span class="text-white">Become a Part of </span><span class="text-[#fe5d0a]">The Boys Burger Family</span>
+            <div class="relative z-10 flex flex-col justify-center h-full px-6 lg:px-32">
+                <h2 class="text-white text-2xl lg:text-4xl font-inter font-bold uppercase mb-6 leading-tight">
+                    <span class="text-white">Become a Part of </span><span class="text-orange-400">The Boys Burger Family</span>
                 </h2>
                 
-                <p class="text-white text-[24px] font-inter font-normal leading-[29px] mb-[56px] max-w-[696px]">
+                <p class="text-white text-lg lg:text-2xl font-inter font-normal mb-8 leading-relaxed">
                     Partner with a brand loved by burger lovers. Start your own franchise and grow with us!
                 </p>
                 
-                <button type="button" class="bg-[#fe5d0a] h-[54px] w-[213px] rounded-[5px] flex items-center justify-center space-x-[10px] cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" onclick="window.location.href='Inquiry Page.html'" aria-label="Inquire About Franchise">
-    <img src="../assets/images/img_mdishoplocationoutline.svg" alt="Location Icon" class="h-[24px] w-[24px]" />
-    <span class="text-white text-[18px] font-inter font-semibold leading-[22px]">INQUIRE NOW</span>
-</button>
-
+                <button class="bg-orange-500 h-12 lg:h-14 w-fit px-8 lg:px-12 rounded-md flex items-center justify-center space-x-3 cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95">
+                    <span class="text-white text-lg font-inter font-semibold">INQUIRE NOW</span>
+                    <span class="text-white text-xl">📍</span>
+                </button>
             </div>
         </div>
         
         <!-- Footer -->
-        <footer class="bg-[#b83e00] py-[38px] px-[210px]">
-            <div class="flex justify-between items-start">
+        <footer class="bg-red-800 py-12 lg:py-16 px-6 lg:px-32">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
                 <!-- Logo and Social -->
-                <div class="flex flex-col items-center w-[146px]">
-                    <img src="../assets/images/img_footerlogo.png" alt="The Boys Burger Logo" class="h-[146px] w-[146px] mb-[27px]" />
-                    <p class="text-white text-[16px] font-poppins font-semibold leading-[24px] mb-[27px]">FOLLOW US</p>
-                    <a href="https://www.instagram.com/theboyz_burger?igsh=MXZrbTg2aDRlZnB6Ng==" target="_blank" aria-label="Instagram">
-    <img src="../assets/images/img_riinstagramfill.svg" alt="Instagram" class="h-[50px] w-[50px]" />
-</a>
-
+                <div class="flex flex-col items-center text-center">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23fe5d0a'/><text x='50' y='60' font-family='Arial' font-size='30' font-weight='bold' text-anchor='middle' fill='white'>BB</text></svg>" alt="The Boys Burger Logo" class="h-24 w-24 lg:h-32 lg:w-32 mb-6" />
+                    <p class="text-white text-base font-poppins font-semibold mb-6">FOLLOW US</p>
+                    <div class="text-white text-2xl">📱</div>
                 </div>
                 
                 <!-- Services -->
-                <div class="flex flex-col w-[105px]">
-                    <h3 class="text-white text-[16px] font-inter font-semibold leading-[20px] text-center mb-[23px]">SERVICES</h3>
-                    <ul class="space-y-[15px] text-center">
-                        <li><a href="Inquiry Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Door Delivery</a></li>
-                        <li><a href="Inquiry Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Catering</a></li>
-                        <li><a href="Inquiry Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Dining</a></li>
-                        <li><a href="Inquiry Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Party Hall</a></li>
+                <div class="text-center lg:text-left">
+                    <h3 class="text-white text-lg font-inter font-semibold mb-6">SERVICES</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-white text-base font-inter font-normal hover:text-orange-300 transition-colors">Door Delivery</a></li>
+                        <li><a href="#" class="text-white text-base font-inter font-normal hover:text-orange-300 transition-colors">Catering</a></li>
+                        <li><a href="#" class="text-white text-base font-inter font-normal hover:text-orange-300 transition-colors">Dining</a></li>
+                        <li><a href="#" class="text-white text-base font-inter font-normal hover:text-orange-300 transition-colors">Party Hall</a></li>
                     </ul>
                 </div>
                 
                 <!-- Links -->
-                <div class="flex flex-col w-[182px]">
-                    <h3 class="text-white text-[16px] font-inter font-semibold leading-[20px] mb-[22px]">LINKS</h3>
-                    <ul class="space-y-[15px]">
-                        <li><a href="Home Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Home</a></li>
-                        <li><a href="Menu Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Menu</a></li>
-                        <li><a href="Shop.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">About Us</a></li>
-                        <li><a href="Inquiry Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Contact</a></li>
+                <div class="text-center lg:text-left">
+                    <h3 class="text-white text-lg font-inter font-semibold mb-6">LINKS</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-white text-base font-inter font-normal hover:text-orange-300 transition-colors">Home</a></li>
+                        <li><a href="#" class="text-white text-base font-inter font-normal hover:text-orange-300 transition-colors">Menu</a></li>
+                        <li><a href="#" class="text-white text-base font-inter font-normal hover:text-orange-300 transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-white text-base font-inter font-normal hover:text-orange-300 transition-colors">Contact</a></li>
                     </ul>
                 </div>
                 
                 <!-- Contact -->
-                <div class="flex flex-col w-[254px]">
-                    <h3 class="text-white text-[16px] font-inter font-semibold leading-[20px] mb-[23px]">CONTACT US</h3>
-                    <div class="space-y-[14px]">
-                        <div class="flex items-center space-x-[5px]">
-                            <img src="../assets/images/img_iconparkoutlinemail.svg" alt="Email Icon" class="h-[24px] w-[24px]" />
-                            <a href="mailto:theboysburger06@gmail.com" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors">theboysburger06@gmail.com</a>
+                <div class="text-center lg:text-left">
+                    <h3 class="text-white text-lg font-inter font-semibold mb-6">CONTACT US</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-center lg:justify-start space-x-2">
+                            <span class="text-white text-lg">📧</span>
+                            <a href="mailto:theboysburger06@gmail.com" class="text-white text-sm lg:text-base font-inter font-normal hover:text-orange-300 transition-colors">theboysburger06@gmail.com</a>
                         </div>
-                        <div class="flex items-center space-x-[6px]">
-                            <img src="../assets/images/img_iconoirphone.svg" alt="Phone Icon" class="h-[24px] w-[24px]" />
-                            <a href="tel:+919876504321" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors">+91 9876504321</a>
+                        <div class="flex items-center justify-center lg:justify-start space-x-2">
+                            <span class="text-white text-lg">📞</span>
+                            <a href="tel:+919876504321" class="text-white text-base font-inter font-normal hover:text-orange-300 transition-colors">+91 9876504321</a>
                         </div>
-                        <div class="flex items-center space-x-[7px]">
-                            <img src="../assets/images/img_iconoirphone.svg" alt="Phone Icon" class="h-[24px] w-[24px]" />
-                            <a href="tel:+919828928282" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors">+91 9828928282</a>
+                        <div class="flex items-center justify-center lg:justify-start space-x-2">
+                            <span class="text-white text-lg">📞</span>
+                            <a href="tel:+919828928282" class="text-white text-base font-inter font-normal hover:text-orange-300 transition-colors">+91 9828928282</a>
                         </div>
                     </div>
                 </div>
@@ -319,27 +398,28 @@
         </footer>
         
         <!-- Copyright -->
-        <div class="bg-[#591a00] py-[23px]">
-            <p class="text-white text-[16px] font-inter font-medium leading-[20px] text-center">
+        <div class="bg-red-900 py-6">
+            <p class="text-white text-base font-inter font-medium text-center">
                 © 2025 The Boys Burger. All rights reserved.
             </p>
         </div>
     </div>
     
     <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('open');
+        }
+        
         function handleButtonClick(button) {
             console.log('Button clicked:', button.textContent.trim());
-            // Add button click functionality here
         }
         
         function handleNavigation(link) {
             console.log('Navigation clicked:', link.textContent.trim());
-            // Add navigation functionality here
-        }
-        
-        function handleCardClick(card) {
-            console.log('Card clicked:', card);
-            // Add card click functionality here
+            // Close mobile menu if open
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.remove('open');
         }
     </script>
 </body>
