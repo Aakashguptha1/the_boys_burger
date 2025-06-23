@@ -20,15 +20,15 @@
                 <nav class="flex space-x-[40px]" role="navigation">
                      <a href="Home Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">HOME</a>
                         <a href="Menu Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">MENU</a>
-                        <a href="Shop.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">OUR STORY</a>
+                        <a href="Story.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">OUR STORY</a>
                         <a href="Inquiry Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">CONTACT</a>
                         <a href="Location Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">OUR SHOP</a>
                     </nav>
                 
                 <!-- Franchise Button -->
-                <button type="button" class="bg-[#fe5d0a] text-white text-[18px] font-inter font-semibold leading-[22px] px-[28px] py-[12px] rounded-[5px] hover:bg-orange-600 transition-colors cursor-pointer" onclick="handleButtonClick(this)" aria-label="Franchise inquiry">
-                    FRANCHISE INQUIRE
-                </button>
+                <button type="button" class="bg-[#fe5d0a] h-[46px] w-[237px] rounded-[5px] flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" onclick="window.location.href='Inquiry Page.html'" aria-label="Franchise Inquiry">
+					<span class="text-white text-[18px] font-inter font-semibold leading-[22px]">FRANCHISE INQUIRE</span>
+					</button>
             </header>
             
             <!-- Hero Content -->
@@ -182,7 +182,7 @@
                 <img src="../assets/images/img_doublebaconcheeseburger.png" alt="Double Bacon Cheeseburger" class="w-[270px] h-[450px] object-cover rounded-[5px] cursor-pointer transition-transform hover:scale-105" onclick="handleCardClick(this)" />
                 <img src="../assets/images/img_arabicstreetfoodshaurmalavash_450x270.png" alt="Arabic Street Food Shawarma" class="w-[270px] h-[450px] object-cover rounded-[5px] cursor-pointer transition-transform hover:scale-105" onclick="handleCardClick(this)" />
                 <img src="../assets/images/img_icecreamwithcookietable_450x270.png" alt="Ice Cream with Cookie" class="w-[270px] h-[450px] object-cover rounded-[5px] cursor-pointer transition-transform hover:scale-105" onclick="handleCardClick(this)" />
-                <img src="../assets/images/img_9016_450x270.png" alt="Bread Omelet Special" class="w-[270px] h-[450px] object-cover rounded-[5px] cursor-pointer transition-transform hover:scale-105" onclick="handleCardClick(this)" />
+               
             </div>
         </div>
     </div>
@@ -199,77 +199,72 @@
                     <p class="text-white text-[24px] font-inter font-normal leading-[29px] mb-[59px]">
                         Partner with a brand loved by burger lovers. Start your own franchise and grow with us!
                     </p>
-                    <button type="button" class="bg-[#fe5d0a] text-white text-[18px] font-inter font-semibold leading-[22px] px-[28px] py-[16px] rounded-[5px] flex items-center gap-[10px] hover:bg-orange-600 transition-colors cursor-pointer" onclick="handleButtonClick(this)" aria-label="Inquire about franchise opportunities">
-                        <img src="../assets/images/img_mdishoplocationoutline.svg" alt="Location Icon" class="w-[24px] h-[24px]" />
-                        INQUIRE NOW
-                    </button>
+                   <a href="Inquiry Page.html" class="w-fit bg-[#fe5d0a] text-white text-[18px] font-inter font-semibold leading-[22px] px-[28px] py-[16px] rounded-[5px] flex items-center gap-[10px] hover:bg-orange-600 transition-colors cursor-pointer" aria-label="Inquire about franchise opportunities">
+    <img src="../assets/images/img_mdishoplocationoutline.svg" alt="Location Icon" class="w-[24px] h-[24px]" />
+    INQUIRE NOW
+</a>
+
+
                 </div>
             </div>
         </div>
     </div>
     
     <!-- Footer -->
-    <footer class="bg-[#b83e00] py-[38px]" role="contentinfo">
-        <div class="max-w-[1440px] mx-auto px-4">
-            <div class="flex flex-col lg:flex-row justify-between items-start gap-8">
+    <footer class="bg-[#b83e00] py-[38px] px-[210px]">
+            <div class="flex justify-between items-start">
                 <!-- Logo and Social -->
-                <div class="flex flex-col items-center lg:items-start">
-                    <img src="../assets/images/img_footerlogo.png" alt="The Boys Burger Footer Logo" class="w-[146px] h-[146px] mb-[27px]" />
-                    <p class="text-white text-[16px] font-poppins font-semibold leading-[24px] mb-[27px]">
-                        FOLLOW US
-                    </p>
-                    <img src="../assets/images/img_riinstagramfill.svg" alt="Instagram" class="w-[50px] h-[50px] cursor-pointer hover:opacity-80 transition-opacity" onclick="handleSocialClick(this)" />
+                <div class="flex flex-col items-center w-[146px]">
+                    <img src="../assets/images/img_footerlogo.png" alt="The Boys Burger Logo" class="h-[146px] w-[146px] mb-[27px]" />
+                    <p class="text-white text-[16px] font-poppins font-semibold leading-[24px] mb-[27px]">FOLLOW US</p>
+                    <a href="https://www.instagram.com/theboyz_burger?igsh=MXZrbTg2aDRlZnB6Ng==" target="_blank" aria-label="Instagram">
+    <img src="../assets/images/img_riinstagramfill.svg" alt="Instagram" class="h-[50px] w-[50px]" />
+</a>
+
                 </div>
                 
                 <!-- Services -->
-                <div class="text-center lg:text-left">
-                    <h3 class="text-white text-[16px] font-inter font-semibold leading-[20px] mb-[23px]">
-                        SERVICES
-                    </h3>
-                    <ul class="space-y-[15px]">
-                        <li><a href="#delivery" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Door Delivery</a></li>
-                        <li><a href="#catering" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Catering</a></li>
-                        <li><a href="#dining" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Dining</a></li>
-                        <li><a href="#party" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Party Hall</a></li>
+                <div class="flex flex-col w-[105px]">
+                    <h3 class="text-white text-[16px] font-inter font-semibold leading-[20px] text-center mb-[23px]">SERVICES</h3>
+                    <ul class="space-y-[15px] text-center">
+                        <li><a href="Inquiry Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Door Delivery</a></li>
+                        <li><a href="Inquiry Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Catering</a></li>
+                        <li><a href="Inquiry Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Dining</a></li>
+                        <li><a href="Inquiry Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Party Hall</a></li>
                     </ul>
                 </div>
                 
                 <!-- Links -->
-                <div class="text-center lg:text-left">
-                    <h3 class="text-white text-[16px] font-inter font-semibold leading-[20px] mb-[22px]">
-                        LINKS
-                    </h3>
+                <div class="flex flex-col w-[182px]">
+                    <h3 class="text-white text-[16px] font-inter font-semibold leading-[20px] mb-[22px]">LINKS</h3>
                     <ul class="space-y-[15px]">
-                        <li><a href="#home" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Home</a></li>
-                        <li><a href="#menu" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Menu</a></li>
-                        <li><a href="#about" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">About Us</a></li>
-                        <li><a href="#contact" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Contact</a></li>
+                        <li><a href="Home Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Home</a></li>
+                        <li><a href="Menu Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Menu</a></li>
+                        <li><a href="Shop.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">About Us</a></li>
+                        <li><a href="Inquiry Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Contact</a></li>
                     </ul>
                 </div>
                 
                 <!-- Contact -->
-                <div class="text-center lg:text-left">
-                    <h3 class="text-white text-[16px] font-inter font-semibold leading-[20px] mb-[21px]">
-                        CONTACT US
-                    </h3>
-                    <div class="space-y-[15px]">
-                        <div class="flex items-center justify-center lg:justify-start gap-[7px]">
-                            <img src="../assets/images/img_iconparkoutlinemail.svg" alt="Email Icon" class="w-[24px] h-[24px]" />
-                            <a href="mailto:theboysburger06@gmail.com" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">theboysburger06@gmail.com</a>
+                <div class="flex flex-col w-[254px]">
+                    <h3 class="text-white text-[16px] font-inter font-semibold leading-[20px] mb-[23px]">CONTACT US</h3>
+                    <div class="space-y-[14px]">
+                        <div class="flex items-center space-x-[5px]">
+                            <img src="../assets/images/img_iconparkoutlinemail.svg" alt="Email Icon" class="h-[24px] w-[24px]" />
+                            <a href="mailto:theboysburger06@gmail.com" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors">theboysburger06@gmail.com</a>
                         </div>
-                        <div class="flex items-center justify-center lg:justify-start gap-[6px]">
-                            <img src="../assets/images/img_iconoirphone.svg" alt="Phone Icon" class="w-[24px] h-[24px]" />
-                            <a href="tel:+919876504321" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">+91 9876504321</a>
+                        <div class="flex items-center space-x-[6px]">
+                            <img src="../assets/images/img_iconoirphone.svg" alt="Phone Icon" class="h-[24px] w-[24px]" />
+                            <a href="tel:+919876504321" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors">+91 9876504321</a>
                         </div>
-                        <div class="flex items-center justify-center lg:justify-start gap-[7px]">
-                            <img src="../assets/images/img_iconoirphone.svg" alt="Phone Icon" class="w-[24px] h-[24px]" />
-                            <a href="tel:+919828928282" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">+91 9828928282</a>
+                        <div class="flex items-center space-x-[7px]">
+                            <img src="../assets/images/img_iconoirphone.svg" alt="Phone Icon" class="h-[24px] w-[24px]" />
+                            <a href="tel:+919828928282" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors">+91 9828928282</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
     
     <!-- Copyright -->
     <div class="bg-[#591a00] py-[23px]">
