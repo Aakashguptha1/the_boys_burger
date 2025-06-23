@@ -1,115 +1,174 @@
-// mobile-adaptive.js
-// This script adapts navigation and layout for mobile screens
+// Add this JavaScript code without modifying the existing HTML structure
 
-document.addEventListener('DOMContentLoaded', function () {
-    // 1. Mobile Navigation: Hamburger menu
+document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('header');
-    if (!header) return;
-
-    // Create hamburger for mobile
-    const hamburger = document.createElement('button');
-    hamburger.setAttribute('aria-label', 'Open Navigation');
-    hamburger.innerHTML = `
-        <span style="display:block;width:26px;height:4px;background:#fff;margin:4px 0;border-radius:2px"></span>
-        <span style="display:block;width:26px;height:4px;background:#fff;margin:4px 0;border-radius:2px"></span>
-        <span style="display:block;width:26px;height:4px;background:#fff;margin:4px 0;border-radius:2px"></span>
-    `;
-    hamburger.style.display = 'none';
-    hamburger.style.background = 'transparent';
-    hamburger.style.border = 'none';
-    hamburger.style.cursor = 'pointer';
-    hamburger.style.padding = '4px';
-    hamburger.style.outline = 'none';
-    hamburger.classList.add('mobile-nav-hamburger');
-
-    // Grab nav and button
     const nav = header.querySelector('nav');
-    const navButton = header.querySelector('button');
-
-    // Mobile nav panel
-    const mobileNav = document.createElement('div');
-    mobileNav.style.position = 'fixed';
-    mobileNav.style.top = '0';
-    mobileNav.style.right = '0';
-    mobileNav.style.width = '80vw';
-    mobileNav.style.maxWidth = '320px';
-    mobileNav.style.height = '100vh';
-    mobileNav.style.background = '#2d2727ee';
-    mobileNav.style.zIndex = '9999';
-    mobileNav.style.transform = 'translateX(100%)';
-    mobileNav.style.transition = 'transform 0.3s';
-    mobileNav.style.display = 'flex';
-    mobileNav.style.flexDirection = 'column';
-    mobileNav.style.padding = '32px 24px';
-    mobileNav.style.boxShadow = '-2px 0 32px rgba(0,0,0,0.3)';
-    mobileNav.innerHTML = `
-        <button aria-label="Close Navigation" style="background:none;border:none;align-self:flex-end;font-size:2rem;color:#fff;cursor:pointer">&times;</button>
+    const franchiseButton = header.querySelector('button');
+    
+    // Create mobile menu button (hamburger)
+    const mobileMenuButton = document.createElement('button');
+    mobileMenuButton.className = 'mobile-menu-button';
+    mobileMenuButton.setAttribute('aria-label', 'Toggle mobile menu');
+    mobileMenuButton.innerHTML = `
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    `;
+    mobileMenuButton.style.cssText = `
+        display: none;
+        background: none;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1000;
     `;
 
-    // Add nav links
-    const navClone = nav.cloneNode(true);
-    navClone.style.display = 'flex';
-    navClone.style.flexDirection = 'column';
-    navClone.style.gap = '24px';
-    navClone.querySelectorAll('a').forEach(a => {
-        a.style.fontSize = '20px';
-        a.style.color = '#fff';
-        a.style.textAlign = 'left';
-        a.style.margin = '0';
-        a.style.padding = '0';
-        a.style.fontWeight = '500';
-    });
-    // Franchise button
-    const btnClone = navButton.cloneNode(true);
-    btnClone.style.width = '100%';
-    btnClone.style.marginTop = '32px';
+    // Create mobile menu container
+    const mobileMenu = document.createElement('div');
+    mobileMenu.className = 'mobile-menu';
+    mobileMenu.style.cssText = `
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: #FE5D0A;
+        padding: 80px 20px 20px;
+        transition: right 0.3s ease;
+        z-index: 999;
+        overflow-y: auto;
+    `;
 
-    mobileNav.appendChild(navClone);
-    mobileNav.appendChild(btnClone);
-
-    document.body.appendChild(mobileNav);
-
-    // Hamburger toggle logic
-    hamburger.addEventListener('click', () => {
-        mobileNav.style.transform = 'translateX(0)';
-        document.body.style.overflow = 'hidden';
-    });
-    mobileNav.querySelector('button[aria-label="Close Navigation"]').addEventListener('click', () => {
-        mobileNav.style.transform = 'translateX(100%)';
-        document.body.style.overflow = '';
-    });
-
-    // Insert hamburger
-    header.insertBefore(hamburger, nav);
+    // Clone navigation items for mobile menu
+    const mobileNav = nav.cloneNode(true);
+    mobileNav.style.cssText = `
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    `;
     
-    // 2. Detect screen size & toggle elements
-    function updateForMobile() {
-        if (window.innerWidth <= 900) {
-            nav.style.display = 'none';
-            navButton.style.display = 'none';
-            hamburger.style.display = 'block';
-        } else {
-            nav.style.display = '';
-            navButton.style.display = '';
-            hamburger.style.display = 'none';
-            mobileNav.style.transform = 'translateX(100%)';
-            document.body.style.overflow = '';
-        }
-    }
-    window.addEventListener('resize', updateForMobile);
-    updateForMobile();
+    // Clone franchise button for mobile menu
+    const mobileFranchiseButton = franchiseButton.cloneNode(true);
+    mobileFranchiseButton.style.marginTop = '20px';
 
-    // 3. Add smooth scroll to anchor links (optional)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const targetId = this.getAttribute('href').slice(1);
-            const target = document.getElementById(targetId);
-            if (target) {
-                e.preventDefault();
-                target.scrollIntoView({behavior: 'smooth'});
-                mobileNav.style.transform = 'translateX(100%)';
-                document.body.style.overflow = '';
+    // Add elements to mobile menu
+    mobileMenu.appendChild(mobileNav);
+    mobileMenu.appendChild(mobileFranchiseButton);
+
+    // Add mobile elements to DOM
+    header.appendChild(mobileMenuButton);
+    document.body.appendChild(mobileMenu);
+
+    // Style hamburger icon
+    const hamburgerStyle = document.createElement('style');
+    hamburgerStyle.textContent = `
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px 0;
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+        @media (max-width: 768px) {
+            header nav, 
+            header > button {
+                display: none !important;
             }
+            .mobile-menu-button {
+                display: block !important;
+            }
+        }
+    `;
+    document.head.appendChild(hamburgerStyle);
+
+    // Toggle mobile menu
+    let isMenuOpen = false;
+    mobileMenuButton.addEventListener('click', () => {
+        isMenuOpen = !isMenuOpen;
+        mobileMenuButton.querySelector('.hamburger').classList.toggle('active');
+        mobileMenu.style.display = 'block';
+        mobileMenu.style.right = isMenuOpen ? '0' : '-100%';
+        document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+    });
+
+    // Close menu when clicking links
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            isMenuOpen = false;
+            mobileMenu.style.right = '-100%';
+            mobileMenuButton.querySelector('.hamburger').classList.remove('active');
+            document.body.style.overflow = '';
         });
     });
+
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && isMenuOpen) {
+            isMenuOpen = false;
+            mobileMenu.style.right = '-100%';
+            mobileMenuButton.querySelector('.hamburger').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Add media queries for responsive sections
+    const responsiveStyle = document.createElement('style');
+    responsiveStyle.textContent = `
+        @media (max-width: 768px) {
+            .w-full > div {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+            
+            .flex.justify-between {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .flex.justify-between > div {
+                width: 100% !important;
+            }
+            
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            h1, h2 {
+                font-size: 32px !important;
+                line-height: 1.2 !important;
+            }
+            
+            footer .flex.justify-between {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            footer .flex.justify-between > div {
+                margin-bottom: 30px;
+            }
+        }
+    `;
+    document.head.appendChild(responsiveStyle);
 });
