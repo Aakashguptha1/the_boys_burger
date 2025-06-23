@@ -22,14 +22,15 @@
                     <nav class="flex items-center space-x-[40px]">
                         <a href="Home Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">HOME</a>
                         <a href="Menu Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">MENU</a>
-                        <a href="Shop.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">OUR STORY</a>
+                        <a href="Story.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">OUR STORY</a>
                         <a href="Inquiry Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">CONTACT</a>
                         <a href="Location Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">OUR SHOP</a>
                     </nav>
                     
-                    <button type="button" class="bg-[#fe5d0a] h-[46px] w-[237px] rounded-[5px] flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" onclick="handleButtonClick(this)" aria-label="Franchise Inquiry">
-                        <span class="text-white text-[18px] font-inter font-semibold leading-[22px]">FRANCHISE INQUIRE</span>
-                    </button>
+                    <button type="button" class="bg-[#fe5d0a] h-[46px] w-[237px] rounded-[5px] flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" onclick="window.location.href='Inquiry Page.html'" aria-label="Franchise Inquiry">
+    <span class="text-white text-[18px] font-inter font-semibold leading-[22px]">FRANCHISE INQUIRE</span>
+</button>
+
                 </header>
                 
                 <!-- Hero Content -->
@@ -40,9 +41,10 @@
                         Burgers Made with Love and a Lot of Cheese!
                     </h1>
                     
-                    <button type="button" class="bg-[#fe5d0a] h-[52px] w-[179px] rounded-[5px] flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" onclick="handleButtonClick(this)" aria-label="Inquire Now">
-                        <span class="text-white text-[18px] font-inter font-semibold leading-[22px]">INQUIRE NOW</span>
-                    </button>
+                    <button type="button" class="bg-[#fe5d0a] h-[52px] w-[179px] rounded-[5px] flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" onclick="window.location.href='Inquiry Page.html'" aria-label="Inquire Now">
+    <span class="text-white text-[18px] font-inter font-semibold leading-[22px]">INQUIRE NOW</span>
+</button>
+
                 </div>
             </div>
         </div>
@@ -67,9 +69,11 @@
                     Started in 2021 as students funding our own education. At 19, we launched a small food stall near Jamal Mohamed College.Today, we proudly run 3 shops — built on passion, hustle, and heart.
                 </p>
                 
-                <button type="button" class="bg-[#fe5d0a] h-[46px] w-[161px] rounded-[5px] flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95 mt-[46px]" onclick="handleButtonClick(this)" aria-label="Our Story">
-                    <span class="text-white text-[18px] font-inter font-semibold leading-[22px]">OUR STORY</span>
-                </button>
+                <a href="Story.html" aria-label="Our Story" class="bg-[#fe5d0a] h-[46px] w-[161px] rounded-[5px] flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95 mt-[46px]">
+						<span class="text-white text-[18px] font-inter font-semibold leading-[22px]">OUR STORY</span>
+				</a>
+
+
             </div>
         </div>
         
@@ -146,10 +150,11 @@
             
             <!-- View All Button -->
             <div class="flex justify-center">
-                <button type="button" class="bg-[#fe5d0a] h-[57px] w-[208px] rounded-[5px] flex items-center justify-center space-x-[10px] cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" onclick="handleButtonClick(this)" aria-label="View All Menu Items">
-                    <img src="../assets/images/img_carbon.svg" alt="View Icon" class="h-[27px] w-[27px]" />
-                    <span class="text-white text-[18px] font-inter font-semibold leading-[22px]">VIEW ALL</span>
-                </button>
+                <button type="button" class="bg-[#fe5d0a] h-[57px] w-[208px] rounded-[5px] flex items-center justify-center space-x-[10px] cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" onclick="window.location.href='Menu Page.html'" aria-label="View All Menu Items">
+    <img src="../assets/images/img_carbon.svg" alt="View Icon" class="h-[27px] w-[27px]" />
+    <span class="text-white text-[18px] font-inter font-semibold leading-[22px]">VIEW ALL</span>
+</button>
+
             </div>
         </div>
         
@@ -158,30 +163,31 @@
             <h2 class="text-black text-[32px] font-inter font-bold leading-[39px] text-center uppercase mb-[39px]">our customer says</h2>
             
             <!-- Review Images -->
-            <div class="flex justify-between space-x-[20px] mb-[40px]">
-                <!-- First Review Image -->
-                <div class="relative h-[413px] w-[270px]">
-                    <div class="absolute top-0 left-0 w-full h-[42px]" style="background: linear-gradient(90deg, rgba(255,232,221,0) 0%, rgba(153,139,132,1) 100%);"></div>
-                    <div class="relative mt-[14px]">
-                        <img src="../assets/images/img_inshot20250208135809658.png" alt="Customer Review" class="h-[386px] w-[270px] object-cover rounded-tr-[20px] rounded-bl-[20px]" />
-                        <img src="../assets/images/img_mask_group.png" alt="Review Overlay" class="absolute inset-0 h-[386px] w-[270px] object-cover rounded-tr-[20px] rounded-bl-[20px]" />
-                    </div>
-                </div>
-                
-                <!-- Center Video Review -->
-                <div class="relative h-[386px] w-[560px]">
-                    <img src="../assets/images/img_inshot20250208135809658_386x560.png" alt="Video Review" class="h-[386px] w-[560px] object-cover rounded-[16px]" />
-                    <div class="absolute top-[120px] left-[138px] bg-[#040404] shadow-[0_4px_109px_rgba(136,136,136,1)] h-[158px] w-[285px] flex items-center justify-center rounded-lg">
-                        <img src="../assets/images/img_logosyoutube.svg" alt="YouTube Play Button" class="h-[16px] w-[71px]" />
-                    </div>
-                </div>
-                
-                <!-- Third Review Image -->
-                <div class="relative h-[386px] w-[270px]">
-                    <img src="../assets/images/img_inshot20250208135809658_386x270.png" alt="Customer Review" class="h-[386px] w-[270px] object-cover rounded-tl-[16px] rounded-br-[16px]" />
-                    <img src="../assets/images/img_mask_group_black_900_02.png" alt="Review Overlay" class="absolute inset-0 h-[386px] w-[270px] object-cover rounded-tl-[16px] rounded-br-[16px]" />
-                </div>
-            </div>
+<div class="flex justify-between space-x-[20px] mb-[40px]">
+    
+    <!-- First Review YouTube Thumbnail -->
+    <a href="https://youtu.be/Rdt8gTqV40k?si=ktOdvHrKOjLSZAja" target="_blank" class="relative h-[413px] w-[270px]">
+        <img src="https://img.youtube.com/vi/Rdt8gTqV40k/maxresdefault.jpg" alt="Customer Review" class="h-[386px] w-[270px] object-cover rounded-tr-[20px] rounded-bl-[20px]" />
+        <img src="../assets/images/img_logosyoutube.svg" alt="YouTube Logo" class="absolute top-[10px] left-[10px] h-[20px] w-[50px]" />
+    </a>
+    
+    <!-- Center Video Review YouTube Thumbnail -->
+    <a href="https://www.youtube.com/shorts/sDLdTob3DOQ" target="_blank" class="relative h-[386px] w-[560px]">
+        <img src="https://img.youtube.com/vi/sDLdTob3DOQ/maxresdefault.jpg" alt="Video Review" class="h-[386px] w-[560px] object-cover rounded-[16px]" />
+        <img src="../assets/images/img_logosyoutube.svg" alt="YouTube Logo" class="absolute top-[10px] left-[10px] h-[20px] w-[50px]" />
+    </a>
+    
+    <!-- Third Review YouTube Thumbnail -->
+    <a href="https://youtube.com/shorts/0ChDxAdSfYk?si=Z4GLjnoZhATIuk0T" target="_blank" class="relative h-[386px] w-[270px]">
+        <img src="https://img.youtube.com/vi/0ChDxAdSfYk/maxresdefault.jpg" alt="Customer Review" class="h-[386px] w-[270px] object-cover rounded-tl-[16px] rounded-br-[16px]" />
+        <img src="../assets/images/img_logosyoutube.svg" alt="YouTube Logo" class="absolute top-[10px] left-[10px] h-[20px] w-[50px]" />
+    </a>
+
+</div>
+
+
+
+
             
             <!-- Customer Testimonials -->
             <div class="text-center mb-[52px]">
@@ -193,23 +199,24 @@
             </div>
             
             <!-- Give Review Button -->
-            <div class="flex justify-center">
-                <button type="button" class="bg-[#fe5d0a] h-[60px] w-[298px] rounded-[5px] flex items-center justify-center space-x-[10px] cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" onclick="handleButtonClick(this)" aria-label="Give Your Review">
-                    <img src="../assets/images/img_carbonreview.svg" alt="Review Icon" class="h-[30px] w-[30px]" />
-                    <span class="text-white text-[18px] font-inter font-semibold leading-[22px]">GIVE YOUR REVIEW</span>
-                </button>
-            </div>
+            <<div class="flex justify-center">
+				<a href="https://g.co/kgs/FRmfY6a" class="bg-[#fe5d0a] h-[60px] w-[298px] rounded-[5px] flex items-center justify-center space-x-[10px] cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" aria-label="Give Your Review">
+				<img src="../assets/images/img_carbonreview.svg" alt="Review Icon" class="h-[30px] w-[30px]" />
+				<span class="text-white text-[18px] font-inter font-semibold leading-[22px]">GIVE YOUR REVIEW</span>
+				</a>
+			</div>
+
         </div>
         
         <!-- Burgers with Attitude Section -->
         <div class="relative h-[465px] w-full" style="background-image: url('../assets/images/img_frontviewyummymeatcheeseburgerwithfrenchfriesdarkbackgrounddinnerburgersnackfastfoodsandwichsaladdishtoasts_465x1434.png'); background-size: cover; background-position: center;">
-            <div class="absolute inset-0 bg-black bg-opacity-63"></div>
-            <div class="relative z-10 flex flex-col items-center justify-center h-full px-[213px] text-center">
-                <h2 class="text-white text-[96px] font-merienda-one font-normal leading-[139px] mb-[1px]">Burgers with Attitude</h2>
-                <p class="text-white text-[36px] font-inter font-normal leading-[44px]">The Boys Burger – Where Every Bite Talks Back!</p>
-            </div>
-        </div>
-        
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div> <!-- Use 60 or nearest -->
+    <div class="relative z-10 flex flex-col items-center justify-center h-full px-[213px] text-center">
+        <h2 class="text-white text-[96px] font-merienda-one font-normal leading-[139px] mb-[1px]">Burgers with Attitude</h2>
+        <p class="text-white text-[36px] font-inter font-normal leading-[44px]">The Boys Burger – Where Every Bite Talks Back!</p>
+    </div>
+</div>
+
         <!-- See Us Section -->
         <div class="flex justify-between px-[204px] py-[104px]">
             <!-- Left Content -->
@@ -246,10 +253,11 @@
                     Partner with a brand loved by burger lovers. Start your own franchise and grow with us!
                 </p>
                 
-                <button type="button" class="bg-[#fe5d0a] h-[54px] w-[213px] rounded-[5px] flex items-center justify-center space-x-[10px] cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" onclick="handleButtonClick(this)" aria-label="Inquire About Franchise">
-                    <img src="../assets/images/img_mdishoplocationoutline.svg" alt="Location Icon" class="h-[24px] w-[24px]" />
-                    <span class="text-white text-[18px] font-inter font-semibold leading-[22px]">INQUIRE NOW</span>
-                </button>
+                <button type="button" class="bg-[#fe5d0a] h-[54px] w-[213px] rounded-[5px] flex items-center justify-center space-x-[10px] cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" onclick="window.location.href='Inquiry Page.html'" aria-label="Inquire About Franchise">
+    <img src="../assets/images/img_mdishoplocationoutline.svg" alt="Location Icon" class="h-[24px] w-[24px]" />
+    <span class="text-white text-[18px] font-inter font-semibold leading-[22px]">INQUIRE NOW</span>
+</button>
+
             </div>
         </div>
         
@@ -258,19 +266,22 @@
             <div class="flex justify-between items-start">
                 <!-- Logo and Social -->
                 <div class="flex flex-col items-center w-[146px]">
-                    <img src="../assets/images/img_inshot20241225000540336_1.png" alt="The Boys Burger Logo" class="h-[146px] w-[146px] mb-[27px]" />
+                    <img src="../assets/images/img_footerlogo.png" alt="The Boys Burger Logo" class="h-[146px] w-[146px] mb-[27px]" />
                     <p class="text-white text-[16px] font-poppins font-semibold leading-[24px] mb-[27px]">FOLLOW US</p>
-                    <img src="../assets/images/img_riinstagramfill.svg" alt="Instagram" class="h-[50px] w-[50px]" />
+                    <a href="https://www.instagram.com/theboyz_burger?igsh=MXZrbTg2aDRlZnB6Ng==" target="_blank" aria-label="Instagram">
+    <img src="../assets/images/img_riinstagramfill.svg" alt="Instagram" class="h-[50px] w-[50px]" />
+</a>
+
                 </div>
                 
                 <!-- Services -->
                 <div class="flex flex-col w-[105px]">
                     <h3 class="text-white text-[16px] font-inter font-semibold leading-[20px] text-center mb-[23px]">SERVICES</h3>
                     <ul class="space-y-[15px] text-center">
-                        <li><a href="#delivery" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Door Delivery</a></li>
-                        <li><a href="#catering" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Catering</a></li>
-                        <li><a href="#dining" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Dining</a></li>
-                        <li><a href="#party" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Party Hall</a></li>
+                        <li><a href="Inquiry Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Door Delivery</a></li>
+                        <li><a href="Inquiry Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Catering</a></li>
+                        <li><a href="Inquiry Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Dining</a></li>
+                        <li><a href="Inquiry Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Party Hall</a></li>
                     </ul>
                 </div>
                 
@@ -278,10 +289,10 @@
                 <div class="flex flex-col w-[182px]">
                     <h3 class="text-white text-[16px] font-inter font-semibold leading-[20px] mb-[22px]">LINKS</h3>
                     <ul class="space-y-[15px]">
-                        <li><a href="#home" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Home</a></li>
-                        <li><a href="#menu" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Menu</a></li>
-                        <li><a href="#about" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">About Us</a></li>
-                        <li><a href="#contact" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Contact</a></li>
+                        <li><a href="Home Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Home</a></li>
+                        <li><a href="Menu Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Menu</a></li>
+                        <li><a href="Shop.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">About Us</a></li>
+                        <li><a href="Inquiry Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Contact</a></li>
                     </ul>
                 </div>
                 
