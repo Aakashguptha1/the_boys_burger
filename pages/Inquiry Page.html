@@ -23,15 +23,15 @@
                 <nav class="flex items-center space-x-16" role="navigation">
                      <a href="Home Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">HOME</a>
                         <a href="Menu Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">MENU</a>
-                        <a href="Shop.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">OUR STORY</a>
+                        <a href="Story.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">OUR STORY</a>
                         <a href="Inquiry Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">CONTACT</a>
                         <a href="Location Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">OUR SHOP</a>
                     </nav>
                 
-                <!-- Franchise Button -->
-                <button class="bg-[#fe5d0a] text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-orange-600 transition-colors" onclick="handleButtonClick(this)" aria-label="Franchise Inquiry">
-                    FRANCHISE INQUIRE
-                </button>
+               <!-- Franchise Button -->
+                <button type="button" class="bg-[#fe5d0a] h-[46px] w-[237px] rounded-[5px] flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" onclick="window.location.href='Inquiry Page.html'" aria-label="Franchise Inquiry">
+					<span class="text-white text-[18px] font-inter font-semibold leading-[22px]">FRANCHISE INQUIRE</span>
+					</button>
             </header>
             
             <!-- Hero Content -->
@@ -133,7 +133,10 @@
         
         <!-- Why Choose Section -->
         <div class="relative h-[625px] w-full" style="background-image: url('../assets/images/img_chatgpt_image_jun_22_2025_060611_pm.png'); background-size: cover; background-position: center;">
-            <div class="absolute inset-0 bg-black bg-opacity-64"></div>
+            <!-- -->
+			<div class="absolute inset-0 bg-black bg-opacity-60"></div>
+			
+			
             <div class="relative z-10 flex flex-col items-center justify-center h-full px-8">
                 <!-- Section Title -->
                 <h2 class="text-[48px] font-inter font-bold uppercase text-center leading-[58px] mb-16">
@@ -143,12 +146,13 @@
                 </h2>
                 
                 <!-- Benefits Grid -->
+				<!-- -->
                 <div class="flex flex-row space-x-16 max-w-6xl">
                     <!-- Benefit 1 -->
                     <div class="flex flex-col items-center text-center">
                         <h3 class="text-2xl font-medium text-white mb-8 leading-[29px]">Tasty Burger &<br />Shawarma</h3>
                         <div class="w-[184px] h-[184px] rounded-full border-4 border-white bg-white bg-opacity-10 flex items-center justify-center shadow-lg">
-                            <img src="../assets/images/img_streamlineplumpburgersolid.svg" alt="Burger Icon" class="h-[100px] w-[100px]" />
+                            <img src="image/burger.png" alt="Burger Icon" class="h-[100px] w-[100px]" />
                         </div>
                     </div>
                     
@@ -156,7 +160,7 @@
                     <div class="flex flex-col items-center text-center">
                         <h3 class="text-2xl font-medium text-white mb-8 leading-[29px]">Make with fresh<br />Vegetables</h3>
                         <div class="w-[184px] h-[184px] rounded-full border-4 border-white bg-white bg-opacity-10 flex items-center justify-center shadow-lg">
-                            <img src="../assets/images/img_healthiconsvegetables.svg" alt="Vegetables Icon" class="h-[110px] w-[110px]" />
+                            <img src="image/Vegetable.png" alt="Vegetables Icon" class="h-[110px] w-[110px]" />
                         </div>
                     </div>
                     
@@ -164,7 +168,7 @@
                     <div class="flex flex-col items-center text-center">
                         <h3 class="text-2xl font-medium text-white mb-8 leading-[29px]">Low Investment<br />High Profit</h3>
                         <div class="w-[184px] h-[184px] rounded-full border-4 border-white bg-white bg-opacity-10 flex items-center justify-center shadow-lg">
-                            <img src="../assets/images/img_profit.svg" alt="Profit Icon" class="h-[100px] w-[100px]" />
+                            <img src="image/growth.png" alt="Profit Icon" class="h-[100px] w-[100px]" />
                         </div>
                     </div>
                     
@@ -172,7 +176,7 @@
                     <div class="flex flex-col items-center text-center">
                         <h3 class="text-2xl font-medium text-white mb-8 leading-[29px]">Many food<br />Varieties</h3>
                         <div class="w-[184px] h-[184px] rounded-full border-4 border-white bg-white bg-opacity-10 flex items-center justify-center shadow-lg">
-                            <img src="../assets/images/img_materialsymbolslightfoodbankrounded.svg" alt="Food Varieties Icon" class="h-[130px] w-[130px]" />
+                            <img src="image/dinner.png" alt="Food Varieties Icon" class="h-[130px] w-[130px]" />
                         </div>
                     </div>
                 </div>
@@ -221,100 +225,104 @@
                 </div>
                 
                 <!-- Franchise Payment Card -->
-                <div class="relative w-[543px] h-[683px] rounded-[10px] overflow-hidden">
-                    <img src="../assets/images/img_geminigeneratedimageyt8wkqyt8wkqyt8w.png" alt="Franchise Payment Background" class="absolute inset-0 w-full h-full object-cover" />
-                    <div class="absolute inset-0" style="background-image: url('../assets/images/img_mask_group_683x543.png'); background-size: cover; background-position: center;"></div>
-                    <div class="relative z-10 p-8 h-full flex flex-col items-center justify-center text-center">
-                        <h3 class="text-[32px] font-inter font-extrabold uppercase text-[#fe5d0a] mb-8">franchise payment</h3>
-                        
-                        <div class="border border-white rounded-[10px] p-8 w-full max-w-md">
-                            <div class="space-y-4">
-                                <p class="text-[40px] font-karantina text-white tracking-[3px]">FRANCHISE OPPORTUNITY</p>
-                                <p class="text-[30px] font-karantina text-white tracking-[3px]">WITH LOW INVESTMENT</p>
-                                
-                                <div class="flex items-center justify-center my-8">
-                                    <span class="text-[100px] font-koulen text-[#ffe22b] tracking-[9px]">₹</span>
-                                    <div class="relative">
-                                        <span class="text-[200px] font-koulen text-[#ffe22b] tracking-[18px] leading-none">3L</span>
-                                        <div class="absolute -bottom-4 right-0">
-                                            <span class="text-[50px] font-koulen text-[#ffe22b] tracking-[4px]">AKHS</span><br />
-                                            <span class="text-[35px] font-koulen text-white tracking-[3px]">ONLY</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <p class="text-[40px] font-karantina text-white tracking-[3px]">BE A FRANCHISE PARTNER!</p>
-                                <p class="text-[30px] font-karantina text-white tracking-[3px]">IN OUR STORY OF VICTORY</p>
-                            </div>
-                        </div>
-                        
-                        <p class="text-[32px] font-inter font-extrabold text-white mt-8">ROYALTY UP TO 5%</p>
+            <div class="relative w-[543px] h-[683px] rounded-[10px] overflow-hidden">
+    <img src="../assets/images/img_geminigeneratedimageyt8wkqyt8wkqyt8w.png" alt="Franchise Payment Background" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute inset-0" style="background-image: url('../assets/images/img_mask_group_683x543.png'); background-size: cover; background-position: center;"></div>
+    
+    <div class="relative z-10 p-8 h-full flex flex-col items-center justify-center text-center">
+        <h3 class="text-[32px] font-inter font-extrabold uppercase text-[#fe5d0a] mb-8">FRANCHISE PAYMENT</h3>
+        
+        <div class="border border-white rounded-[10px] p-8 w-full max-w-md">
+            <div class="space-y-4">
+                
+                <p class="text-[40px] font-karantina text-white tracking-[3px]">FRANCHISE OPPORTUNITY</p>
+                <p class="text-[30px] font-karantina text-white tracking-[3px]">WITH LOW INVESTMENT</p>
+                
+                <!-- ₹ 3L AKHS ONLY Block -->
+                <div class="flex items-end justify-center my-8 space-x-2">
+                    
+                 
+                    <div class="flex flex-col items-start ml-2 leading-tight">
+                        <span class="text-[35px] font-koulen text-[#ffe22b] tracking-[3px]">₹ 3 LAKHS ONLY</span>
+                        <span class="text-[30px] font-koulen text-white tracking-[2px]"></span>
                     </div>
                 </div>
+                
+                <p class="text-[40px] font-karantina text-white tracking-[3px]">BE A FRANCHISE PARTNER!</p>
+                <p class="text-[30px] font-karantina text-white tracking-[3px]">IN OUR STORY OF VICTORY</p>
             </div>
         </div>
         
-        <!-- Footer -->
-        <footer class="bg-[#b83e00] text-white" role="contentinfo">
-            <div class="px-16 py-12">
-                <div class="flex flex-row justify-between items-start max-w-7xl mx-auto">
-                    <!-- Logo and Social -->
-                    <div class="flex flex-col items-center">
-                        <img src="../assets/images/img_footerlogo.png" alt="The Boys Burger Footer Logo" class="h-[146px] w-[146px] mb-6" />
-                        <p class="text-base font-poppins font-semibold mb-4">FOLLOW US</p>
-                        <img src="../assets/images/img_riinstagramfill.svg" alt="Instagram" class="h-[50px] w-[50px] cursor-pointer hover:opacity-80" />
-                    </div>
-                    
-                    <!-- Services -->
-                    <div class="flex flex-col text-center">
-                        <h4 class="text-base font-semibold mb-6">SERVICES</h4>
-                        <div class="space-y-4">
-                            <a href="#delivery" class="block text-base hover:text-orange-300 transition-colors">Door Delivery</a>
-                            <a href="#catering" class="block text-base hover:text-orange-300 transition-colors">Catering</a>
-                            <a href="#dining" class="block text-base hover:text-orange-300 transition-colors">Dining</a>
-                            <a href="#party" class="block text-base hover:text-orange-300 transition-colors">Party Hall</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Links -->
-                    <div class="flex flex-col">
-                        <h4 class="text-base font-semibold mb-6">LINKS</h4>
-                        <div class="space-y-4">
-                            <a href="#home" class="block text-base hover:text-orange-300 transition-colors">Home</a>
-                            <a href="#menu" class="block text-base hover:text-orange-300 transition-colors">Menu</a>
-                            <a href="#about" class="block text-base hover:text-orange-300 transition-colors">About Us</a>
-                            <a href="#contact" class="block text-base hover:text-orange-300 transition-colors">Contact</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Contact Info -->
-                    <div class="flex flex-col">
-                        <h4 class="text-base font-semibold mb-6">CONTACT US</h4>
-                        <div class="space-y-4">
-                            <div class="flex items-center gap-3">
-                                <img src="../assets/images/img_iconparkoutlinemail.svg" alt="Email Icon" class="h-6 w-6" />
-                                <span class="text-base">theboysburger06@gmail.com</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <img src="../assets/images/img_iconoirphone.svg" alt="Phone Icon" class="h-6 w-6" />
-                                <span class="text-base">+91 9876504321</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <img src="../assets/images/img_iconoirphone.svg" alt="Phone Icon" class="h-6 w-6" />
-                                <span class="text-base">+91 9828928282</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <p class="text-[32px] font-inter font-extrabold text-white mt-8">ROYALTY UP TO 5%</p>
+    </div>
+</div>
+
+
             </div>
-            
-            <!-- Copyright -->
-            <div class="bg-[#591a00] py-6">
-                <div class="text-center">
-                    <p class="text-base font-medium">© 2025 The Boys Burger. All rights reserved.</p>
+        </div>
+        
+          <!-- Footer -->
+    <footer class="bg-[#b83e00] py-[38px] px-[210px]">
+            <div class="flex justify-between items-start">
+                <!-- Logo and Social -->
+                <div class="flex flex-col items-center w-[146px]">
+                    <img src="../assets/images/img_footerlogo.png" alt="The Boys Burger Logo" class="h-[146px] w-[146px] mb-[27px]" />
+                    <p class="text-white text-[16px] font-poppins font-semibold leading-[24px] mb-[27px]">FOLLOW US</p>
+                    <a href="https://www.instagram.com/theboyz_burger?igsh=MXZrbTg2aDRlZnB6Ng==" target="_blank" aria-label="Instagram">
+    <img src="../assets/images/img_riinstagramfill.svg" alt="Instagram" class="h-[50px] w-[50px]" />
+</a>
+
+                </div>
+                
+                <!-- Services -->
+                <div class="flex flex-col w-[105px]">
+                    <h3 class="text-white text-[16px] font-inter font-semibold leading-[20px] text-center mb-[23px]">SERVICES</h3>
+                    <ul class="space-y-[15px] text-center">
+                        <li><a href="Inquiry Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Door Delivery</a></li>
+                        <li><a href="Inquiry Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Catering</a></li>
+                        <li><a href="Inquiry Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Dining</a></li>
+                        <li><a href="Inquiry Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Party Hall</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Links -->
+                <div class="flex flex-col w-[182px]">
+                    <h3 class="text-white text-[16px] font-inter font-semibold leading-[20px] mb-[22px]">LINKS</h3>
+                    <ul class="space-y-[15px]">
+                        <li><a href="Home Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Home</a></li>
+                        <li><a href="Menu Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Menu</a></li>
+                        <li><a href="Shop.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">About Us</a></li>
+                        <li><a href="Inquiry Page.html" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div class="flex flex-col w-[254px]">
+                    <h3 class="text-white text-[16px] font-inter font-semibold leading-[20px] mb-[23px]">CONTACT US</h3>
+                    <div class="space-y-[14px]">
+                        <div class="flex items-center space-x-[5px]">
+                            <img src="../assets/images/img_iconparkoutlinemail.svg" alt="Email Icon" class="h-[24px] w-[24px]" />
+                            <a href="mailto:theboysburger06@gmail.com" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors">theboysburger06@gmail.com</a>
+                        </div>
+                        <div class="flex items-center space-x-[6px]">
+                            <img src="../assets/images/img_iconoirphone.svg" alt="Phone Icon" class="h-[24px] w-[24px]" />
+                            <a href="tel:+919876504321" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors">+91 9876504321</a>
+                        </div>
+                        <div class="flex items-center space-x-[7px]">
+                            <img src="../assets/images/img_iconoirphone.svg" alt="Phone Icon" class="h-[24px] w-[24px]" />
+                            <a href="tel:+919828928282" class="text-white text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors">+91 9828928282</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
+    
+    <!-- Copyright -->
+    <div class="bg-[#591a00] py-[23px]">
+        <p class="text-white text-[16px] font-inter font-medium leading-[20px] text-center">
+            © 2025 The Boys Burger. All rights reserved.
+        </p>
+    </div>
     </div>
     
     <script>
