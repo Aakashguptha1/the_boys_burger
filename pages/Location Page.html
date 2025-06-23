@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Boys Burger - Franchise Locations</title>
+    <link href="../css/main.css" rel="stylesheet" />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fbumsccyb3550back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-white">
+    <!-- Main Container -->
+    <div class="flex flex-col min-h-screen w-full">
+        <!-- Hero Section with Background -->
+        <div class="relative h-[751px] w-full" style="background-image: url('../assets/images/img_closeupshotburgerwithbaconcheeseredcoffeemug.png'); background-size: cover; background-position: center;">
+            <!-- Dark Overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+            
+            <!-- Header -->
+            <header class="relative z-10 flex items-center justify-between px-[60px] py-[19px]" role="banner">
+                <!-- Logo -->
+                <img src="../assets/images/img_headerlogo.png" alt="The Boys Burger Logo" class="h-[53px] w-[53px]" id="1:411" />
+                
+                <!-- Navigation Menu -->
+                <nav class="flex items-center space-x-[40px]" role="navigation" id="1:412">
+                     <a href="./pages/Home Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">HOME</a>
+                        <a href="./pages/Menu Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">MENU</a>
+                        <a href="./pages/Location Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">OUR STORY</a>
+                        <a href="./pages/Inquiry Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">CONTACT</a>
+                        <a href="./pages/Our Shop.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">OUR SHOP</a>
+                    </nav>
+                
+                <!-- Franchise Inquire Button -->
+                <button type="button" class="bg-[#fe5d0a] text-white text-[18px] font-inter font-semibold leading-[22px] px-[28px] py-[12px] rounded-[5px] hover:bg-orange-600 transition-colors cursor-pointer" onclick="handleFranchiseInquiry()" aria-label="Franchise Inquiry" id="1:418">
+                    FRANCHISE INQUIRE
+                </button>
+            </header>
+            
+            <!-- Hero Title -->
+            <div class="relative z-10 flex items-center justify-center h-full">
+                <h1 class="text-white text-[64px] font-merienda font-black leading-[93px] text-center" id="1:409">
+                    Our Franchise Locations
+                </h1>
+            </div>
+        </div>
+        
+        <!-- Find Locations Section -->
+        <div class="py-[59px] px-4">
+            <!-- Section Title -->
+            <h2 class="text-center text-[32px] font-inter font-bold leading-[39px] uppercase mb-[24px]" id="1:459">
+                <span class="text-black">Find </span>
+                <span class="text-[#fe5d0a]">the Boys Burger </span>
+                <span class="text-black">Near You</span>
+            </h2>
+            
+            <!-- Section Description -->
+            <p class="text-center text-[16px] font-inter font-bold leading-[19px] uppercase text-black max-w-[754px] mx-auto mb-[73px]" id="1:460">
+                Lorem ipsum dolor sit amet consectetur. Gravida netus blandit sodales ante potenti ut. Senectus id proin faucibus viverra nulla lacus sit.
+            </p>
+            
+            <!-- Location Cards -->
+            <div class="flex flex-wrap justify-center gap-[19px] max-w-[1136px] mx-auto">
+                <!-- TVS Tollgate Location -->
+                <div class="flex flex-col w-full max-w-[367px]" id="1:461">
+                    <div class="relative mb-[27px]">
+                        <img src="../assets/images/img_inshot20250208135809658_461x367.png" alt="TVS Tollgate Location" class="w-full h-[367px] object-cover rounded-lg" id="1:465" />
+                        <div class="absolute top-0 left-0 bg-[#fcb41a] flex items-center px-[20px] py-[14px] rounded-br-[20px]">
+                            <img src="../assets/images/img_mdilocation.svg" alt="Location Icon" class="w-[24px] h-[24px] mr-[4px]" id="1:483" />
+                            <span class="text-black text-[24px] font-inter font-medium leading-[30px]" id="1:480">TVS Tollgate</span>
+                        </div>
+                    </div>
+                    <button type="button" class="bg-[#fe5d0a] text-white text-[18px] font-inter font-semibold leading-[22px] px-[28px] py-[12px] rounded-[5px] flex items-center justify-center gap-[4px] hover:bg-orange-600 transition-colors cursor-pointer mx-auto" onclick="getDirection('tvs-tollgate')" aria-label="Get direction to TVS Tollgate location" id="1:462">
+                        <img src="../assets/images/img_vector_white_a700.svg" alt="Direction Icon" class="w-[20px] h-[14px]" id="1:463" />
+                        GET DIRECTION
+                    </button>
+                </div>
+                
+                <!-- Near Police Canteen Location -->
+                <div class="flex flex-col w-full max-w-[367px]" id="1:466">
+                    <div class="relative mb-[27px]">
+                        <img src="../assets/images/img_tvs_461x367.png" alt="Near Police Canteen Location" class="w-full h-[367px] object-cover rounded-lg" id="1:470" />
+                        <div class="absolute top-0 left-0 bg-[#fcb41a] flex items-center px-[22px] py-[14px] rounded-br-[20px]">
+                            <img src="../assets/images/img_mdilocation.svg" alt="Location Icon" class="w-[24px] h-[24px] mr-[4px]" id="1:485" />
+                            <span class="text-black text-[24px] font-inter font-medium leading-[30px]" id="1:481">Near Police Canteen</span>
+                        </div>
+                    </div>
+                    <button type="button" class="bg-[#fe5d0a] text-white text-[18px] font-inter font-semibold leading-[22px] px-[28px] py-[12px] rounded-[5px] flex items-center justify-center gap-[4px] hover:bg-orange-600 transition-colors cursor-pointer mx-auto" onclick="getDirection('police-canteen')" aria-label="Get direction to Near Police Canteen location" id="1:467">
+                        <img src="../assets/images/img_vector_white_a700.svg" alt="Direction Icon" class="w-[20px] h-[14px]" id="1:468" />
+                        GET DIRECTION
+                    </button>
+                </div>
+                
+                <!-- Kattur Location -->
+                <div class="flex flex-col w-full max-w-[367px]" id="1:471">
+                    <div class="relative mb-[27px]">
+                        <img src="../assets/images/img_enjoyingstreetfoodfest.png" alt="Kattur Location" class="w-full h-[367px] object-cover rounded-lg" id="1:475" />
+                        <div class="absolute top-0 left-0 bg-[#fcb41a] flex items-center px-[22px] py-[14px] rounded-br-[20px]">
+                            <img src="../assets/images/img_mdilocation.svg" alt="Location Icon" class="w-[24px] h-[24px] mr-[4px]" id="1:486" />
+                            <span class="text-black text-[24px] font-inter font-medium leading-[30px]" id="1:482">Kattur</span>
+                        </div>
+                        <div class="absolute bottom-0 right-0">
+                            <img src="../assets/images/img_banner.png" alt="Opening Soon Banner" class="w-[177px] h-[359px] rounded-bl-[69px] rounded-br-[69px]" id="1:476" />
+                        </div>
+                    </div>
+                    <button type="button" class="bg-[#fe5d0a] text-white text-[18px] font-inter font-semibold leading-[22px] px-[28px] py-[12px] rounded-[5px] flex items-center justify-center gap-[4px] hover:bg-orange-600 transition-colors cursor-pointer mx-auto" onclick="getDirection('kattur')" aria-label="Get direction to Kattur location" id="1:472">
+                        <img src="../assets/images/img_vector_white_a700.svg" alt="Direction Icon" class="w-[20px] h-[14px]" id="1:473" />
+                        GET DIRECTION
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Franchise Partnership Section -->
+        <div class="relative h-[450px] w-full" style="background-image: url('../assets/images/img_shopbanner_450x1440.png'); background-size: cover; background-position: center;" id="1:420">
+            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+            <div class="relative z-10 flex items-center px-[145px] h-full">
+                <div class="max-w-[696px]">
+                    <h2 class="text-[40px] font-inter font-bold leading-[48px] uppercase mb-[25px]" id="1:426">
+                        <span class="text-white">Become a Part of </span>
+                        <span class="text-[#fe5d0a]">The Boys Burger Family</span>
+                    </h2>
+                    <p class="text-white text-[24px] font-inter font-normal leading-[29px] mb-[59px]" id="1:427">
+                        Partner with a brand loved by burger lovers. Start your own franchise and grow with us!
+                    </p>
+                    <button type="button" class="bg-[#fe5d0a] text-white text-[18px] font-inter font-semibold leading-[22px] px-[28px] py-[17px] rounded-[5px] flex items-center gap-[10px] hover:bg-orange-600 transition-colors cursor-pointer" onclick="handleInquireNow()" aria-label="Inquire about franchise opportunities" id="1:422">
+                        <img src="../assets/images/img_mdishoplocationoutline.svg" alt="Shop Icon" class="w-[24px] h-[24px]" id="1:423" />
+                        INQUIRE NOW
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="bg-[#b83e00] text-white" role="contentinfo" id="1:429">
+            <div class="px-[211px] py-[38px]">
+                <div class="flex flex-wrap justify-between items-start gap-8">
+                    <!-- Logo and Social Media -->
+                    <div class="flex flex-col items-start">
+                        <img src="../assets/images/img_footerlogo.png" alt="The Boys Burger Footer Logo" class="w-[146px] h-[146px] mb-[27px]" id="1:433" />
+                        <p class="text-[16px] font-poppins font-semibold leading-[24px] mb-[13px]" id="1:437">FOLLOW US</p>
+                        <button type="button" class="w-[50px] h-[50px] flex items-center justify-center hover:bg-orange-600 transition-colors cursor-pointer" onclick="followSocialMedia()" aria-label="Follow us on social media" id="1:435">
+                            <img src="../assets/images/img_vector_white_a700_41x41.svg" alt="Social Media Icon" class="w-[41px] h-[41px]" id="1:436" />
+                        </button>
+                    </div>
+                    
+                    <!-- Services -->
+                    <div class="flex flex-col">
+                        <h3 class="text-[16px] font-inter font-semibold leading-[20px] text-center mb-[23px]" id="1:439">SERVICES</h3>
+                        <nav class="flex flex-col space-y-[15px]" role="navigation">
+                            <a href="#door-delivery" class="text-[16px] font-inter font-normal leading-[20px] text-center hover:text-orange-300 transition-colors" id="1:440">Door Delivery</a>
+                            <a href="#catering" class="text-[16px] font-inter font-normal leading-[20px] text-center hover:text-orange-300 transition-colors" id="1:441">Catering</a>
+                            <a href="#dining" class="text-[16px] font-inter font-normal leading-[20px] text-center hover:text-orange-300 transition-colors" id="1:442">Dining</a>
+                            <a href="#party-hall" class="text-[16px] font-inter font-normal leading-[20px] text-center hover:text-orange-300 transition-colors" id="1:443">Party Hall</a>
+                        </nav>
+                    </div>
+                    
+                    <!-- Links -->
+                    <div class="flex flex-col">
+                        <h3 class="text-[16px] font-inter font-semibold leading-[20px] mb-[22px]" id="1:445">LINKS</h3>
+                        <nav class="flex flex-col space-y-[15px]" role="navigation">
+                            <a href="#home" class="text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" id="1:446">Home</a>
+                            <a href="#menu" class="text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" id="1:447">Menu</a>
+                            <a href="#about" class="text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" id="1:448">About Us</a>
+                            <a href="#contact" class="text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" id="1:449">Contact</a>
+                        </nav>
+                    </div>
+                    
+                    <!-- Contact Us -->
+                    <div class="flex flex-col">
+                        <h3 class="text-[16px] font-inter font-semibold leading-[20px] mb-[23px]" id="1:451">CONTACT US</h3>
+                        <div class="flex flex-col space-y-[13px]">
+                            <div class="flex items-center gap-[5px]">
+                                <img src="../assets/images/img_iconparkoutlinemail.svg" alt="Email Icon" class="w-[24px] h-[24px]" id="1:455" />
+                                <a href="mailto:theboysburger06@gmail.com" class="text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" id="1:452">theboysburger06@gmail.com</a>
+                            </div>
+                            <div class="flex items-center gap-[6px]">
+                                <img src="../assets/images/img_iconoirphone.svg" alt="Phone Icon" class="w-[24px] h-[24px]" id="1:456" />
+                                <a href="tel:+919876504321" class="text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" id="1:453">+91 9876504321</a>
+                            </div>
+                            <div class="flex items-center gap-[7px]">
+                                <img src="../assets/images/img_iconoirphone.svg" alt="Phone Icon" class="w-[24px] h-[24px]" id="1:457" />
+                                <a href="tel:+919828928282" class="text-[16px] font-inter font-normal leading-[20px] hover:text-orange-300 transition-colors" id="1:454">+91 9828928282</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="bg-[#591a00] py-[23px]">
+                <p class="text-center text-[16px] font-inter font-medium leading-[20px]" id="1:458">
+                    © 2025 The Boys Burger. All rights reserved.
+                </p>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        function handleFranchiseInquiry() {
+            alert('Franchise inquiry form will open');
+        }
+        
+        function getDirection(location) {
+            alert(`Getting directions to ${location} location`);
+        }
+        
+        function handleInquireNow() {
+            alert('Franchise inquiry form will open');
+        }
+        
+        function followSocialMedia() {
+            alert('Opening social media page');
+        }
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
