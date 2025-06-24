@@ -4,46 +4,91 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Boys Burger - Our Delicious Menu</title>
-    <link href="../css/main.css" rel="stylesheet" />
-<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fwhitesap6108back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merienda:wght@400;700;900&display=swap" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'merienda': ['Merienda', 'cursive'],
+                    },
+                    colors: {
+                        'orange-brand': '#fe5d0a',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-white">
-    <!-- Hero Section with Header -->
-    <div class="relative h-[751px] w-full" style="background-image: url('../assets/images/img_closeupshotburgerwithbaconcheeseredcoffeemug.png'); background-size: cover; background-position: center;">
-        <div class="absolute inset-0 bg-black bg-opacity-60">
-            <!-- Header -->
-            <header class="flex justify-between items-center px-[60px] py-[19px] h-[72px]" role="banner">
-                <!-- Logo -->
-                <img src="../assets/images/img_footerlogo.png" alt="The Boys Burger Logo" class="h-[53px] w-[53px]" />
-                
-                <!-- Navigation Menu -->
-                <nav class="flex space-x-[40px]" role="navigation">
-                     <a href="Home Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">HOME</a>
+<body class="bg-white font-inter">
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenuOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden lg:hidden">
+        <div class="fixed top-0 right-0 w-80 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out" id="mobileMenu">
+            <div class="p-6">
+                <button id="closeMobileMenu" class="absolute top-4 right-4 text-gray-600 hover:text-gray-800">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <nav class="mt-8 space-y-6">
+                    <a href="Home Page.html" class="block text-gray-800 text-lg font-medium hover:text-orange-brand transition-colors">HOME</a>
+                    <a href="Menu Page.html" class="block text-gray-800 text-lg font-medium hover:text-orange-brand transition-colors">MENU</a>
+                    <a href="Story.html" class="block text-gray-800 text-lg font-medium hover:text-orange-brand transition-colors">OUR STORY</a>
+                    <a href="Inquiry Page.html" class="block text-gray-800 text-lg font-medium hover:text-orange-brand transition-colors">CONTACT</a>
+                    <a href="Location Page.html" class="block text-gray-800 text-lg font-medium hover:text-orange-brand transition-colors">OUR SHOP</a>
+                    <button type="button" class="w-full bg-orange-brand text-white py-3 px-6 rounded-lg font-semibold hover:bg-opacity-90 transition-all mt-6" onclick="window.location.href='Inquiry Page.html'">
+                        FRANCHISE INQUIRE
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Main Container -->
+    <div class="w-full">
+        <!-- Hero Section with Background -->
+        <div class="relative h-screen min-h-[600px] lg:h-[754px] w-full" style="background-image: url('../assets/images/img_closeupshotburgerwithbaconcheeseredcoffeemug.png'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+            <div class="relative z-10 flex flex-col h-full px-4 sm:px-8 lg:px-[69px] py-4 lg:py-[19px]">
+                <!-- Header Navigation -->
+                <header class="flex items-center justify-between h-12 lg:h-[53px] w-full" role="navigation">
+                    <img src="../assets/images/img_footerlogo.png" alt="The Boys Burger Logo" class="h-10 w-10 lg:h-[53px] lg:w-[53px]" />
+                    
+                    <!-- Desktop Navigation -->
+                    <nav class="hidden lg:flex items-center space-x-[40px]">
+                        <a href="Home Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">HOME</a>
                         <a href="Menu Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">MENU</a>
                         <a href="Story.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">OUR STORY</a>
                         <a href="Inquiry Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">CONTACT</a>
                         <a href="Location Page.html" class="text-white text-[18px] font-inter font-normal leading-[22px] hover:text-orange-500 transition-colors" onclick="handleNavigation(this)">OUR SHOP</a>
                     </nav>
+                    
+                    <!-- Desktop Franchise Button -->
+                    <button type="button" class="hidden lg:flex bg-[#fe5d0a] h-[46px] w-[237px] rounded-[5px] items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" onclick="window.location.href='Inquiry Page.html'" aria-label="Franchise Inquiry">
+                        <span class="text-white text-[18px] font-inter font-semibold leading-[22px]">FRANCHISE INQUIRE</span>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuButton" class="lg:hidden text-white p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </header>
                 
-                <!-- Franchise Button -->
-                <button type="button" class="bg-[#fe5d0a] h-[46px] w-[237px] rounded-[5px] flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" onclick="window.location.href='Inquiry Page.html'" aria-label="Franchise Inquiry">
-					<span class="text-white text-[18px] font-inter font-semibold leading-[22px]">FRANCHISE INQUIRE</span>
-					</button>
-            </header>
-            
-            <!-- Hero Content -->
-            <div class="flex flex-col items-center justify-center h-full px-4">
-                <h1 class="text-white text-[64px] font-merienda font-black leading-[93px] text-center mb-8">
+                <!-- Hero Content -->
+                 <div class="flex flex-col items-center justify-center h-full px-4 text-center">
+                    <h1 class="text-white text-[32px] md:text-[64px] font-merienda font-black leading-[40px] md:leading-[93px] mb-4 md:mb-8">
                     Our Delicious Menu
-                </h1>
-                <p class="text-white text-[28px] font-inter font-medium leading-[34px] text-center max-w-4xl">
+                    </h1>
+                    <p class="text-white text-[18px] md:text-[28px] font-inter font-medium leading-[24px] md:leading-[34px] max-w-4xl px-4">
                     From juicy burgers to crispy fries – everything made fresh, just for you.
-                </p>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-    
-    <!-- Menu Section -->
     <div class="bg-white py-[81px]">
         <!-- Section Title -->
         <h2 class="text-[#fe5d0a] text-[32px] font-inter font-bold leading-[39px] text-center uppercase mb-[120px]">
@@ -186,41 +231,128 @@
             </div>
         </div>
     </div>
-    
-    <!-- Franchise Section -->
-    <div class="relative h-[450px] w-full" style="background-image: url('../assets/images/img_shopbanner.png'); background-size: cover; background-position: center;">
-        <div class="absolute inset-0 bg-black bg-opacity-60">
-            <div class="flex items-center h-full px-[145px]">
-                <div class="max-w-[696px]">
-                    <h2 class="text-white text-[40px] font-inter font-bold leading-[48px] uppercase mb-[25px]">
-                        <span class="text-white">Become a Part of </span>
-                        <span class="text-[#fe5d0a]">The Boys Burger Family</span>
-                    </h2>
-                    <p class="text-white text-[24px] font-inter font-normal leading-[29px] mb-[59px]">
-                        Partner with a brand loved by burger lovers. Start your own franchise and grow with us!
-                    </p>
-                   <a href="Inquiry Page.html" class="w-fit bg-[#fe5d0a] text-white text-[18px] font-inter font-semibold leading-[22px] px-[28px] py-[16px] rounded-[5px] flex items-center gap-[10px] hover:bg-orange-600 transition-colors cursor-pointer" aria-label="Inquire about franchise opportunities">
-    <img src="../assets/images/img_mdishoplocationoutline.svg" alt="Location Icon" class="w-[24px] h-[24px]" />
-    INQUIRE NOW
-</a>
 
 
+        <!-- Footer -->
+        <footer class="bg-[#b83e00] py-6 sm:py-8 lg:py-[38px] px-4 sm:px-8 lg:px-[210px]">
+            <!-- Mobile Layout (< md) -->
+            <div class="md:hidden">
+                <!-- Logo and Social -->
+                <div class="flex flex-col items-center mb-8">
+                    <img src="../assets/images/img_footerlogo.png" alt="The Boys Burger Logo" class="h-[100px] w-[100px] mb-4" />
+                    <p class="text-white text-[14px] font-poppins font-semibold leading-[20px] mb-4">FOLLOW US</p>
+                    <a href="https://www.instagram.com/theboyz_burger?igsh=MXZrbTg2aDRlZnB6Ng==" target="_blank" aria-label="Instagram">
+                        <img src="../assets/images/img_riinstagramfill.svg" alt="Instagram" class="h-[40px] w-[40px]" />
+                    </a>
+                </div>
+                
+                <!-- Services and Links in 2 columns -->
+                <div class="grid grid-cols-2 gap-6 mb-8">
+                    <!-- Services -->
+                    <div class="flex flex-col">
+                        <h3 class="text-white text-[14px] font-inter font-semibold leading-[18px] text-center mb-4">SERVICES</h3>
+                        <ul class="space-y-3 text-center">
+                            <li><a href="Inquiry Page.html" class="text-white text-[14px] font-inter font-normal leading-[18px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Door Delivery</a></li>
+                            <li><a href="Inquiry Page.html" class="text-white text-[14px] font-inter font-normal leading-[18px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Catering</a></li>
+                            <li><a href="Inquiry Page.html" class="text-white text-[14px] font-inter font-normal leading-[18px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Dining</a></li>
+                            <li><a href="Inquiry Page.html" class="text-white text-[14px] font-inter font-normal leading-[18px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Party Hall</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Links -->
+                    <div class="flex flex-col">
+                        <h3 class="text-white text-[14px] font-inter font-semibold leading-[18px] text-center mb-4">LINKS</h3>
+                        <ul class="space-y-3 text-center">
+                            <li><a href="Home Page.html" class="text-white text-[14px] font-inter font-normal leading-[18px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Home</a></li>
+                            <li><a href="Menu Page.html" class="text-white text-[14px] font-inter font-normal leading-[18px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Menu</a></li>
+                            <li><a href="Shop.html" class="text-white text-[14px] font-inter font-normal leading-[18px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">About Us</a></li>
+                            <li><a href="Inquiry Page.html" class="text-white text-[14px] font-inter font-normal leading-[18px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Contact -->
+                <div class="flex flex-col">
+                    <h3 class="text-white text-[14px] font-inter font-semibold leading-[18px] text-center mb-4">CONTACT US</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-center space-x-2">
+                            <img src="../assets/images/img_iconparkoutlinemail.svg" alt="Email Icon" class="h-[20px] w-[20px]" />
+                            <a href="mailto:theboysburger06@gmail.com" class="text-white text-[12px] sm:text-[14px] font-inter font-normal leading-[18px] hover:text-orange-300 transition-colors break-all">theboysburger06@gmail.com</a>
+                        </div>
+                        <div class="flex items-center justify-center space-x-2">
+                            <img src="../assets/images/img_iconoirphone.svg" alt="Phone Icon" class="h-[20px] w-[20px]" />
+                            <a href="tel:+919876504321" class="text-white text-[14px] font-inter font-normal leading-[18px] hover:text-orange-300 transition-colors">+91 9876504321</a>
+                        </div>
+                        <div class="flex items-center justify-center space-x-2">
+                            <img src="../assets/images/img_iconoirphone.svg" alt="Phone Icon" class="h-[20px] w-[20px]" />
+                            <a href="tel:+919828928282" class="text-white text-[14px] font-inter font-normal leading-[18px] hover:text-orange-300 transition-colors">+91 9828928282</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    
-    <!-- Footer -->
-    <footer class="bg-[#b83e00] py-[38px] px-[210px]">
-            <div class="flex justify-between items-start">
+
+            <!-- Tablet Layout (md only) -->
+            <div class="hidden md:flex lg:hidden justify-between items-start">
+                <!-- Logo and Social -->
+                <div class="flex flex-col items-center w-[120px]">
+                    <img src="../assets/images/img_footerlogo.png" alt="The Boys Burger Logo" class="h-[120px] w-[120px] mb-4" />
+                    <p class="text-white text-[14px] font-poppins font-semibold leading-[20px] mb-4">FOLLOW US</p>
+                    <a href="https://www.instagram.com/theboyz_burger?igsh=MXZrbTg2aDRlZnB6Ng==" target="_blank" aria-label="Instagram">
+                        <img src="../assets/images/img_riinstagramfill.svg" alt="Instagram" class="h-[40px] w-[40px]" />
+                    </a>
+                </div>
+                
+                <!-- Services -->
+                <div class="flex flex-col w-[100px]">
+                    <h3 class="text-white text-[14px] font-inter font-semibold leading-[18px] text-center mb-4">SERVICES</h3>
+                    <ul class="space-y-3 text-center">
+                        <li><a href="Inquiry Page.html" class="text-white text-[14px] font-inter font-normal leading-[18px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Door Delivery</a></li>
+                        <li><a href="Inquiry Page.html" class="text-white text-[14px] font-inter font-normal leading-[18px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Catering</a></li>
+                        <li><a href="Inquiry Page.html" class="text-white text-[14px] font-inter font-normal leading-[18px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Dining</a></li>
+                        <li><a href="Inquiry Page.html" class="text-white text-[14px] font-inter font-normal leading-[18px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Party Hall</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Links -->
+                <div class="flex flex-col w-[100px]">
+                    <h3 class="text-white text-[14px] font-inter font-semibold leading-[18px] mb-4">LINKS</h3>
+                    <ul class="space-y-3">
+                        <li><a href="Home Page.html" class="text-white text-[14px] font-inter font-normal leading-[18px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Home</a></li>
+                        <li><a href="Menu Page.html" class="text-white text-[14px] font-inter font-normal leading-[18px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Menu</a></li>
+                        <li><a href="Shop.html" class="text-white text-[14px] font-inter font-normal leading-[18px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">About Us</a></li>
+                        <li><a href="Inquiry Page.html" class="text-white text-[14px] font-inter font-normal leading-[18px] hover:text-orange-300 transition-colors" onclick="handleNavigation(this)">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div class="flex flex-col w-[220px]">
+                    <h3 class="text-white text-[14px] font-inter font-semibold leading-[18px] mb-4">CONTACT US</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-2">
+                            <img src="../assets/images/img_iconparkoutlinemail.svg" alt="Email Icon" class="h-[20px] w-[20px]" />
+                            <a href="mailto:theboysburger06@gmail.com" class="text-white text-[12px] font-inter font-normal leading-[16px] hover:text-orange-300 transition-colors break-all">theboysburger06@gmail.com</a>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img src="../assets/images/img_iconoirphone.svg" alt="Phone Icon" class="h-[20px] w-[20px]" />
+                            <a href="tel:+919876504321" class="text-white text-[14px] font-inter font-normal leading-[18px] hover:text-orange-300 transition-colors">+91 9876504321</a>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img src="../assets/images/img_iconoirphone.svg" alt="Phone Icon" class="h-[20px] w-[20px]" />
+                            <a href="tel:+919828928282" class="text-white text-[14px] font-inter font-normal leading-[18px] hover:text-orange-300 transition-colors">+91 9828928282</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop Layout (lg+) -->
+            <div class="hidden lg:flex justify-between items-start">
                 <!-- Logo and Social -->
                 <div class="flex flex-col items-center w-[146px]">
                     <img src="../assets/images/img_footerlogo.png" alt="The Boys Burger Logo" class="h-[146px] w-[146px] mb-[27px]" />
                     <p class="text-white text-[16px] font-poppins font-semibold leading-[24px] mb-[27px]">FOLLOW US</p>
                     <a href="https://www.instagram.com/theboyz_burger?igsh=MXZrbTg2aDRlZnB6Ng==" target="_blank" aria-label="Instagram">
-    <img src="../assets/images/img_riinstagramfill.svg" alt="Instagram" class="h-[50px] w-[50px]" />
-</a>
-
+                        <img src="../assets/images/img_riinstagramfill.svg" alt="Instagram" class="h-[50px] w-[50px]" />
+                    </a>
                 </div>
                 
                 <!-- Services -->
@@ -265,38 +397,54 @@
                 </div>
             </div>
         </footer>
-    
-    <!-- Copyright -->
-    <div class="bg-[#591a00] py-[23px]">
-        <p class="text-white text-[16px] font-inter font-medium leading-[20px] text-center">
-            © 2025 The Boys Burger. All rights reserved.
-        </p>
-    </div>
-    
+        
+        <!-- Copyright -->
+        <div class="bg-[#591a00] py-4 sm:py-5 lg:py-[23px]">
+            <p class="text-white text-[14px] sm:text-[15px] lg:text-[16px] font-inter font-medium leading-[20px] text-center px-4">
+                © 2025 The Boys Burger. All rights reserved.
+            </p>
+        </div>
+
     <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMobileMenu = document.getElementById('closeMobileMenu');
+
+        function openMobileMenu() {
+            mobileMenuOverlay.classList.remove('hidden');
+            setTimeout(() => {
+                mobileMenu.classList.remove('translate-x-full');
+            }, 10);
+        }
+
+        function closeMobileMenuFunction() {
+            mobileMenu.classList.add('translate-x-full');
+            setTimeout(() => {
+                mobileMenuOverlay.classList.add('hidden');
+            }, 300);
+        }
+
+        mobileMenuButton.addEventListener('click', openMobileMenu);
+        closeMobileMenu.addEventListener('click', closeMobileMenuFunction);
+        mobileMenuOverlay.addEventListener('click', (e) => {
+            if (e.target === mobileMenuOverlay) {
+                closeMobileMenuFunction();
+            }
+        });
+
+        // Navigation handler (if needed)
         function handleNavigation(element) {
-            const href = element.getAttribute('href');
-            console.log('Navigating to:', href);
-            // Add navigation logic here
+            // Add any navigation logic here
+            console.log('Navigating to:', element.href);
         }
-        
-        function handleButtonClick(element) {
-            const buttonText = element.textContent.trim();
-            console.log('Button clicked:', buttonText);
-            // Add button click logic here
-        }
-        
-        function handleCardClick(element) {
-            const cardTitle = element.querySelector('h3')?.textContent || 'Menu Item';
-            console.log('Card clicked:', cardTitle);
-            // Add card click logic here
-        }
-        
-        function handleSocialClick(element) {
-            const platform = element.getAttribute('alt');
-            console.log('Social media clicked:', platform);
-            // Add social media click logic here
-        }
+
+        // Close mobile menu when clicking on navigation links
+        const mobileNavLinks = document.querySelectorAll('#mobileMenu nav a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenuFunction);
+        });
     </script>
 </body>
-</html>
+</html>      
