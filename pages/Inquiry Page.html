@@ -339,6 +339,28 @@
             </div>
         </div>
     </div>
+    <form
+  name="contact"
+  method="POST"
+  data-netlify-recaptcha="true"
+  data-netlify="true"
+>
+  <p>
+    <label>
+      Email: <input type="text" name="name" />
+    </label>
+  </p>
+  <p>
+    <label>
+      Message: <textarea name="message"></textarea>
+    </label>
+  </p>
+  <div data-netlify-recaptcha="true"></div>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
+
 
         <!-- Footer -->
         <footer class="bg-[#b83e00] py-6 sm:py-8 lg:py-[38px] px-4 sm:px-8 lg:px-[210px]">
