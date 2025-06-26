@@ -10,7 +10,7 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
+                    fontFamily: {<
                         'inter': ['Inter', 'sans-serif'],
                         'merienda': ['Merienda', 'cursive'],
                     },
@@ -298,7 +298,7 @@
             
             <!-- Contact Form -->
             <div class="bg-[#fff4ef] rounded-[10px] p-6 md:p-12 flex-1 max-w-full lg:max-w-[657px]" >
-                <form onsubmit="handleFormSubmit(event)" class="space-y-4 md:space-y-6" name="contact" method="POST" data-netlify="true" >
+                <form  class="space-y-4 md:space-y-6" name="contact" method="POST" data-netlify="true" >
                     <!-- Full Name -->
                     <div>
                         <label for="fullName" class="block text-sm md:text-base font-semibold uppercase text-black mb-2">Full Name*</label>
@@ -339,7 +339,7 @@
             </div>
         </div>
     </div>
-<form >
+<form  class="space-y-4 md:space-y-6" name="contact1" method="POST" data-netlify="true">
   <p>
     <label>Your Name: <input type="text" name="name" /></label>
   </p>
